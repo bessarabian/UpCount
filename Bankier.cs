@@ -6,12 +6,12 @@ namespace Bankier
 {
     internal class Bankier
     {
-        public static void abob()
+        public static void InsertDataInTable()
         {
             var client = new MongoClient("mongodb://localhost:27017");
             var db = client.ListDatabases().ToString();
 
-               
+            
         }
     }
 }
