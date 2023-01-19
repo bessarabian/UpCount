@@ -1,15 +1,39 @@
 ﻿using MongoDB.Driver;
+using MongoDB.Bson;
 using System;
 
 namespace UpCount
 {
-    internal class DB_Control
+    public class DB_Control
     {
-        public DB_Control() 
-        {
-            MongoClient db_client = new MongoClient("mongodb://localhost:27017");
-            
-        } 
+        private MongoClient _dbClient;
         
+        public DB_Control(string db_connection_string)
+        {
+            _dbClient = new MongoClient(db_connection_string);
+        }
+
+        public void DatabaseInsert(double amount) 
+        {
+            string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
+            var database = _dbClient.GetDatabase("consumptions");
+            var collection = database.GetCollection<BsonDocument>("expenses");
+            var document = new BsonDocument
+            {
+                {"date", date},
+                {"amount", amount},
+                {"currency", "mock"}
+            };
+
+            collection.InsertOneAsync(document);
+
+            var collections = database.GetCollection<BsonDocument>("expenses");
+            var documents = collections.Find(new BsonDocument()).ToList();
+
+            foreach (BsonDocument item in documents)
+            {
+                Console.WriteLine(item);
+            }
+        }
     }
 }

@@ -94,7 +94,6 @@
             this.rem_btn.TabIndex = 8;
             this.rem_btn.Text = "Remove";
             this.rem_btn.UseVisualStyleBackColor = true;
-            this.rem_btn.Click += new System.EventHandler(this.Rem_btn_Click);
             // 
             // add_btn
             // 

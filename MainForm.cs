@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Data.SqlTypes;
 using System.Drawing;
 using System.Windows.Forms;
 
@@ -7,7 +6,7 @@ namespace UpCount
 {
     public partial class MainForm : Form
     {
-
+        DB_Control db_ctrl = new DB_Control("mongodb://localhost:27017"); // replace with smth decent in the end
         public MainForm()
         {
             InitializeComponent();
@@ -28,15 +27,12 @@ namespace UpCount
                 DialogResult dr = form2.ShowDialog();
                 if(dr == DialogResult.OK)
                 {
+                    db_ctrl.DatabaseInsert(form2.money_spent);
                     var sum = Convert.ToDouble(total_spent.Text) + form2.money_spent;
                     total_spent.Text = Convert.ToString(sum);
+
                 }
             }
-        }
-
-        private void Rem_btn_Click(object sender, EventArgs e)
-        {
-            var db_control = new UpCount.DB_Control();
         }
     }
 }
