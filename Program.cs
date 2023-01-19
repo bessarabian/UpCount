@@ -16,7 +16,7 @@ namespace UpCount
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new UpCount());
+            Application.Run(new MainForm());
         }
     }
 }

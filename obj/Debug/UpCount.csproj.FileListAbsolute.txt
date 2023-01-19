@@ -93,7 +93,6 @@ C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Text.Encoding.CodePages.xml
 C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.csproj.AssemblyReference.cache
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.csproj.SuggestedBindingRedirects.cache
-C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.UpCount.resources
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.Properties.Resources.resources
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.csproj.GenerateResource.cache
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.csproj.CoreCompileInputs.cache
@@ -101,3 +100,4 @@ C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.csproj.CopyComplete
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.exe
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.pdb
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.AddExpenseForm.resources
+C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.MainForm.resources

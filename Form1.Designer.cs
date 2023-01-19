@@ -1,6 +1,6 @@
 ﻿namespace UpCount
 {
-    partial class UpCount
+    partial class MainForm
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -42,10 +42,12 @@
             this.vert_line = new System.Windows.Forms.Label();
             this.detail_tab = new System.Windows.Forms.TabPage();
             this.category_tab = new System.Windows.Forms.TabPage();
+            this.total_spent = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.main_tab.SuspendLayout();
             this.panel2.SuspendLayout();
             this.recent_exp_pnl.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.general_sum_pnl.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,6 +135,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Transparent;
+            this.panel1.Controls.Add(this.total_spent);
             this.panel1.Location = new System.Drawing.Point(453, 102);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 273);
@@ -179,7 +182,7 @@
             this.detail_tab.Margin = new System.Windows.Forms.Padding(4);
             this.detail_tab.Name = "detail_tab";
             this.detail_tab.Padding = new System.Windows.Forms.Padding(4);
-            this.detail_tab.Size = new System.Drawing.Size(1664, 700);
+            this.detail_tab.Size = new System.Drawing.Size(1282, 641);
             this.detail_tab.TabIndex = 1;
             this.detail_tab.Text = "Details";
             this.detail_tab.UseVisualStyleBackColor = true;
@@ -190,10 +193,19 @@
             this.category_tab.Margin = new System.Windows.Forms.Padding(4);
             this.category_tab.Name = "category_tab";
             this.category_tab.Padding = new System.Windows.Forms.Padding(4);
-            this.category_tab.Size = new System.Drawing.Size(1664, 700);
+            this.category_tab.Size = new System.Drawing.Size(1282, 641);
             this.category_tab.TabIndex = 2;
             this.category_tab.Text = "Categories";
             this.category_tab.UseVisualStyleBackColor = true;
+            // 
+            // total_spent
+            // 
+            this.total_spent.AutoSize = true;
+            this.total_spent.Location = new System.Drawing.Point(3, 20);
+            this.total_spent.Name = "total_spent";
+            this.total_spent.Size = new System.Drawing.Size(29, 31);
+            this.total_spent.TabIndex = 0;
+            this.total_spent.Text = "0";
             // 
             // UpCount
             // 
@@ -211,6 +223,8 @@
             this.panel2.ResumeLayout(false);
             this.recent_exp_pnl.ResumeLayout(false);
             this.recent_exp_pnl.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.general_sum_pnl.ResumeLayout(false);
             this.general_sum_pnl.PerformLayout();
             this.ResumeLayout(false);
@@ -233,6 +247,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel recent_exp_pnl;
         private System.Windows.Forms.Label recent_exp_lbl;
+        private System.Windows.Forms.Label total_spent;
     }
 }
 

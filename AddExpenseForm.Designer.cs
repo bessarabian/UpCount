@@ -32,7 +32,7 @@
             this.spenton_cmbbox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.amount_textbox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.confirm_exp_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.currency_cmbbox = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -72,15 +72,16 @@
             this.amount_textbox.Size = new System.Drawing.Size(259, 22);
             this.amount_textbox.TabIndex = 3;
             // 
-            // button1
+            // confirm_exp_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(92, 353);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 57);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Confirm";
-            this.button1.UseVisualStyleBackColor = true;
+            this.confirm_exp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.confirm_exp_btn.Location = new System.Drawing.Point(92, 353);
+            this.confirm_exp_btn.Name = "confirm_exp_btn";
+            this.confirm_exp_btn.Size = new System.Drawing.Size(158, 57);
+            this.confirm_exp_btn.TabIndex = 4;
+            this.confirm_exp_btn.Text = "Confirm";
+            this.confirm_exp_btn.UseVisualStyleBackColor = true;
+            this.confirm_exp_btn.Click += new System.EventHandler(this.Button1_Click);
             // 
             // label3
             // 
@@ -107,7 +108,7 @@
             this.ClientSize = new System.Drawing.Size(343, 450);
             this.Controls.Add(this.currency_cmbbox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.confirm_exp_btn);
             this.Controls.Add(this.amount_textbox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.spenton_cmbbox);
@@ -126,7 +127,7 @@
         private System.Windows.Forms.ComboBox spenton_cmbbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox amount_textbox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button confirm_exp_btn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox currency_cmbbox;
     }

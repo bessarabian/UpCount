@@ -1,15 +1,14 @@
 ﻿using System;
+using System.Data.SqlTypes;
 using System.Drawing;
 using System.Windows.Forms;
-using Bankier;
 
 namespace UpCount
 {
-    public partial class UpCount : Form
+    public partial class MainForm : Form
     {
-        AddExpenseForm add_exp_from = new AddExpenseForm();
 
-        public UpCount()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -24,7 +23,15 @@ namespace UpCount
 
         private void Add_btn_Click(object sender, EventArgs e)
         {
-            add_exp_from.Show();
+            using (AddExpenseForm form2 = new AddExpenseForm())
+            {
+                DialogResult dr = form2.ShowDialog();
+                if(dr == DialogResult.OK)
+                {
+                    var sum = Convert.ToDouble(total_spent.Text) + form2.money_spent;
+                    total_spent.Text = Convert.ToString(sum);
+                }
+            }
         }
     }
 }
