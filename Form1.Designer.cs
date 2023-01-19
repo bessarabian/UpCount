@@ -36,19 +36,21 @@
             this.recent_exp_pnl = new System.Windows.Forms.Panel();
             this.recent_exp_lbl = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.total_spent = new System.Windows.Forms.Label();
             this.general_sum_pnl = new System.Windows.Forms.Panel();
             this.total_lbl = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.vert_line = new System.Windows.Forms.Label();
             this.detail_tab = new System.Windows.Forms.TabPage();
             this.category_tab = new System.Windows.Forms.TabPage();
-            this.total_spent = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.main_tab.SuspendLayout();
             this.panel2.SuspendLayout();
             this.recent_exp_pnl.SuspendLayout();
             this.panel1.SuspendLayout();
             this.general_sum_pnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -92,6 +94,7 @@
             this.rem_btn.TabIndex = 8;
             this.rem_btn.Text = "Remove";
             this.rem_btn.UseVisualStyleBackColor = true;
+            this.rem_btn.Click += new System.EventHandler(this.Rem_btn_Click);
             // 
             // add_btn
             // 
@@ -107,6 +110,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Controls.Add(this.recent_exp_pnl);
             this.panel2.Location = new System.Drawing.Point(23, 45);
             this.panel2.Name = "panel2";
@@ -140,6 +144,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(246, 273);
             this.panel1.TabIndex = 5;
+            // 
+            // total_spent
+            // 
+            this.total_spent.AutoSize = true;
+            this.total_spent.Location = new System.Drawing.Point(3, 20);
+            this.total_spent.Name = "total_spent";
+            this.total_spent.Size = new System.Drawing.Size(29, 31);
+            this.total_spent.TabIndex = 0;
+            this.total_spent.Text = "0";
             // 
             // general_sum_pnl
             // 
@@ -198,23 +211,25 @@
             this.category_tab.Text = "Categories";
             this.category_tab.UseVisualStyleBackColor = true;
             // 
-            // total_spent
+            // dataGridView1
             // 
-            this.total_spent.AutoSize = true;
-            this.total_spent.Location = new System.Drawing.Point(3, 20);
-            this.total_spent.Name = "total_spent";
-            this.total_spent.Size = new System.Drawing.Size(29, 31);
-            this.total_spent.TabIndex = 0;
-            this.total_spent.Text = "0";
+            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 57);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(423, 270);
+            this.dataGridView1.TabIndex = 6;
             // 
-            // UpCount
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1291, 671);
             this.Controls.Add(this.tabControl1);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "UpCount";
+            this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpCount";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -227,6 +242,7 @@
             this.panel1.PerformLayout();
             this.general_sum_pnl.ResumeLayout(false);
             this.general_sum_pnl.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -248,6 +264,7 @@
         private System.Windows.Forms.Panel recent_exp_pnl;
         private System.Windows.Forms.Label recent_exp_lbl;
         private System.Windows.Forms.Label total_spent;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }
 

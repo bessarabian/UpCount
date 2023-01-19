@@ -33,5 +33,10 @@ namespace UpCount
                 }
             }
         }
+
+        private void Rem_btn_Click(object sender, EventArgs e)
+        {
+            var db_control = new UpCount.DB_Control();
+        }
     }
 }

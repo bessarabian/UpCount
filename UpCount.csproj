@@ -164,7 +164,7 @@
     <Compile Include="AddExpenseForm.Designer.cs">
       <DependentUpon>AddExpenseForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Bankier.cs" />
+    <Compile Include="DB_Control.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
