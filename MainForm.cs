@@ -7,6 +7,7 @@ namespace UpCount
     public partial class MainForm : Form
     {
         DB_Control db_ctrl = new DB_Control("mongodb://localhost:27017"); // replace with smth decent in the end
+        Currency curr_manager = new Currency();
         public MainForm()
         {
             InitializeComponent();
@@ -27,12 +28,17 @@ namespace UpCount
                 DialogResult dr = form2.ShowDialog();
                 if(dr == DialogResult.OK)
                 {
-                    db_ctrl.DatabaseInsert(form2.money_spent);
+                    db_ctrl.DatabaseInsertExpense(form2.money_spent, "na abobusov");
                     var sum = Convert.ToDouble(total_spent.Text) + form2.money_spent;
                     total_spent.Text = Convert.ToString(sum);
 
                 }
             }
+        }
+
+        private async void Rem_btn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

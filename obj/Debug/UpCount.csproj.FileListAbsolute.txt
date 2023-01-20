@@ -101,3 +101,7 @@ C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.exe
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.pdb
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.AddExpenseForm.resources
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.MainForm.resources
+C:\Users\gerem\Desktop\UpCount\bin\Debug\Newtonsoft.Json.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\Skelp.CurrencyApiClient.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\Skelp.WebApiBase.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\Newtonsoft.Json.xml

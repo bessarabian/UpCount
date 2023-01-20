@@ -13,7 +13,7 @@ namespace UpCount
             _dbClient = new MongoClient(db_connection_string);
         }
 
-        public void DatabaseInsert(double amount) 
+        public void DatabaseInsertExpense(double amount, string subject) 
         {
             string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             var database = _dbClient.GetDatabase("consumptions");
@@ -22,7 +22,8 @@ namespace UpCount
             {
                 {"date", date},
                 {"amount", amount},
-                {"currency", "mock"}
+                {"currency", "mock"},
+                {"subject", subject}
             };
 
             collection.InsertOneAsync(document);
