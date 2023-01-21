@@ -1,19 +1,22 @@
 ﻿using RestSharp;
-using System;
-using System.IO;
+using Newtonsoft.Json;
 
 namespace UpCount
 {
     public class Requests
     {
-        public void TestGetRequest(string to, string from, int amount)
+        public async void TestGetRequest(string to, string from, int amount)
         {
             RestClient client = new RestClient("https://api.apilayer.com/exchangerates_data");
-            RestRequest request = new RestRequest("https://www.google.com"/*$"/convertconvert?to={to}&from={from}&amount={amount}"*/);
+            RestRequest request = new RestRequest($"convert?to={to}&from={from}&amount={amount}");
+            request.AddHeader("apikey", "OqP8tWMDIfHN6ca0ve0NQJuV4z0XfQGG");
             
-            RestResponse response = client.Execute(request);
 
-            Console.WriteLine(response.StatusCode);
+            RestResponse response = client.Get(request);
+
+            ConvertResult conv = JsonConvert.DeserializeObject<ConvertResult>(response.Content);
+
+            System.Console.WriteLine(conv.Result);
         }
     }
 }
