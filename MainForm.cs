@@ -36,9 +36,11 @@ namespace UpCount
             }
         }
 
-        private async void Rem_btn_Click(object sender, EventArgs e)
+        private void Rem_btn_Click(object sender, EventArgs e)
         {
+            Requests abobrik = new Requests();
 
+            abobrik.TestGetRequest("UAH", "USD", 200);
         }
     }
 }

@@ -54,9 +54,6 @@ C:\Users\gerem\Desktop\UpCount\bin\Debug\UpCount.exe.config
 C:\Users\gerem\Desktop\UpCount\bin\Debug\UpCount.exe
 C:\Users\gerem\Desktop\UpCount\bin\Debug\UpCount.pdb
 C:\Users\gerem\Desktop\UpCount\bin\Debug\DnsClient.dll
-C:\Users\gerem\Desktop\UpCount\bin\Debug\MetroFramework.Design.dll
-C:\Users\gerem\Desktop\UpCount\bin\Debug\MetroFramework.dll
-C:\Users\gerem\Desktop\UpCount\bin\Debug\MetroFramework.Fonts.dll
 C:\Users\gerem\Desktop\UpCount\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\gerem\Desktop\UpCount\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
 C:\Users\gerem\Desktop\UpCount\bin\Debug\Microsoft.Win32.Registry.dll
@@ -102,6 +99,14 @@ C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.pdb
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.AddExpenseForm.resources
 C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.MainForm.resources
 C:\Users\gerem\Desktop\UpCount\bin\Debug\Newtonsoft.Json.dll
-C:\Users\gerem\Desktop\UpCount\bin\Debug\Skelp.CurrencyApiClient.dll
-C:\Users\gerem\Desktop\UpCount\bin\Debug\Skelp.WebApiBase.dll
 C:\Users\gerem\Desktop\UpCount\bin\Debug\Newtonsoft.Json.xml
+C:\Users\gerem\Desktop\UpCount\bin\Debug\RestSharp.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\RestSharp.Serializers.NewtonsoftJson.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Text.Json.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\System.ValueTuple.dll
+C:\Users\gerem\Desktop\UpCount\bin\Debug\RestSharp.xml
+C:\Users\gerem\Desktop\UpCount\bin\Debug\RestSharp.Serializers.NewtonsoftJson.xml
+C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Text.Json.xml
+C:\Users\gerem\Desktop\UpCount\bin\Debug\System.ValueTuple.xml
