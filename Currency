@@ -3,9 +3,9 @@ using Newtonsoft.Json;
 
 namespace UpCount
 {
-    public class Requests
+    public class Currency
     {
-        public async void TestGetRequest(string to, string from, int amount)
+        public void TestGetRequest(string to, string from, int amount)
         {
             RestClient client = new RestClient("https://api.apilayer.com/exchangerates_data");
             RestRequest request = new RestRequest($"convert?to={to}&from={from}&amount={amount}");

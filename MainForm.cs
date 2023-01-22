@@ -15,10 +15,16 @@ namespace UpCount
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // proper colors for panels
             general_sum_pnl.BackColor = Color.FromArgb(86, 113, 137);
             recent_exp_pnl.BackColor = Color.FromArgb(86, 113, 137);
             total_lbl.ForeColor = Color.White;
             recent_exp_lbl.ForeColor = Color.White;
+
+            // rigth currency simbols
+            bgn_lbl.Text = Currency.Currencies.BGN.ToString();
+            usd_lbl.Text = Currency.Currencies.USD.ToString();
+            eur_lbl.Text = Currency.Currencies.EUR.ToString();
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
@@ -28,9 +34,6 @@ namespace UpCount
                 DialogResult dr = form2.ShowDialog();
                 if(dr == DialogResult.OK)
                 {
-                    db_ctrl.DatabaseInsertExpense(form2.money_spent, "na abobusov");
-                    var sum = Convert.ToDouble(total_spent.Text) + form2.money_spent;
-                    total_spent.Text = Convert.ToString(sum);
 
                 }
             }
@@ -38,9 +41,7 @@ namespace UpCount
 
         private void Rem_btn_Click(object sender, EventArgs e)
         {
-            Requests abobrik = new Requests();
-
-            abobrik.TestGetRequest("UAH", "USD", 200);
+            
         }
     }
 }

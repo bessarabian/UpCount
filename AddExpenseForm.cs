@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using System.Collections.Generic;
 
 namespace UpCount
 {
@@ -14,7 +15,9 @@ namespace UpCount
 
         private void AddExpenseForm_Load(object sender, EventArgs e)
         {
-            currency_cmbbox.Items.Add("Dollar(s) $");
+            currency_cmbbox.DataSource = Enum.GetValues(typeof(Currency.Currencies));
+            Currency.Currencies currency;
+            Enum.TryParse(currency_cmbbox.SelectedValue.ToString(), out currency);
         }
 
         private void Button1_Click(object sender, EventArgs e)
