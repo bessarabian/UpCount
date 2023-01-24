@@ -8,7 +8,7 @@ namespace UpCount
     {
         double default_double = 0.0;
         public double money_spent { get; set; }
-        public int curr_result { get; set; }
+        public Currency.Currencies curr_result { get; set; }
         public AddExpenseForm()
         {
             InitializeComponent();
@@ -31,13 +31,13 @@ namespace UpCount
                 switch (currency_cmbbox.SelectedItem)
                 {
                     case Currency.Currencies.BGN:
-                        curr_result = 0;
+                        curr_result = Currency.Currencies.BGN;
                         break;
                     case Currency.Currencies.USD:
-                        curr_result = 1;
+                        curr_result = Currency.Currencies.USD;
                         break;
                     case Currency.Currencies.EUR:
-                        curr_result = 2;
+                        curr_result = Currency.Currencies.EUR;
                         break;
                 }
                 Close();

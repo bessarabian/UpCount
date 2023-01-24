@@ -13,7 +13,7 @@ namespace UpCount
             _dbClient = new MongoClient(db_connection_string);
         }
 
-        public void DatabaseInsertExpense(double amount, string subject) 
+        public void DatabaseInsertExpense(double amount, string subject, Currency.Currencies currency) 
         {
             string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
             var database = _dbClient.GetDatabase("consumptions");
@@ -22,7 +22,7 @@ namespace UpCount
             {
                 {"date", date},
                 {"amount", amount},
-                {"currency", "mock"},
+                {"currency", currency.ToString()},
                 {"subject", subject}
             };
 
@@ -31,10 +31,7 @@ namespace UpCount
             var collections = database.GetCollection<BsonDocument>("expenses");
             var documents = collections.Find(new BsonDocument()).ToList();
 
-            foreach (BsonDocument item in documents)
-            {
-                Console.WriteLine(item);
-            }
+            
         }
     }
 }

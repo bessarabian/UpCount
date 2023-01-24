@@ -30,21 +30,22 @@ namespace UpCount
         {
             using (AddExpenseForm form2 = new AddExpenseForm())
             {
-                DialogResult dr = form2.ShowDialog();
+                DialogResult dr = form2.ShowDialog(); 
                 if(dr == DialogResult.OK)
                 {
                     switch(form2.curr_result)
                     {
-                        case 0:
+                        case Currency.Currencies.BGN:
                             total1.Text = Convert.ToString(Convert.ToInt64(total1.Text) + Convert.ToInt64(form2.money_spent));
                             break;
-                        case 1:
+                        case Currency.Currencies.USD:
                             total2.Text = Convert.ToString(Convert.ToInt64(total2.Text) + Convert.ToInt64(form2.money_spent));
                             break;
-                        case 2:
+                        case Currency.Currencies.EUR:
                             total3.Text = Convert.ToString(Convert.ToInt64(total3.Text) + Convert.ToInt64(form2.money_spent));
                             break;
                     }
+                    db_ctrl.DatabaseInsertExpense(form2.money_spent, "mock", form2.curr_result);
                 }
             }
         }
