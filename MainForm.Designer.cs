@@ -32,8 +32,6 @@
             this.main_tab = new System.Windows.Forms.TabPage();
             this.eur_lbl = new System.Windows.Forms.Label();
             this.eur_pan = new System.Windows.Forms.Panel();
-            this.usd_pan = new System.Windows.Forms.Panel();
-            this.usd_lbl = new System.Windows.Forms.Label();
             this.bgn_pan = new System.Windows.Forms.Panel();
             this.bgn_lbl = new System.Windows.Forms.Label();
             this.total3 = new System.Windows.Forms.Label();
@@ -49,15 +47,18 @@
             this.total_lbl = new System.Windows.Forms.Label();
             this.usd_total = new System.Windows.Forms.Panel();
             this.eur_total = new System.Windows.Forms.Panel();
+            this.usd_pan = new System.Windows.Forms.Panel();
+            this.usd_lbl = new System.Windows.Forms.Label();
             this.detail_tab = new System.Windows.Forms.TabPage();
             this.charts_tab = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.main_tab.SuspendLayout();
-            this.usd_pan.SuspendLayout();
             this.bgn_pan.SuspendLayout();
             this.panel2.SuspendLayout();
             this.recent_exp_pnl.SuspendLayout();
             this.general_sum_pnl.SuspendLayout();
+            this.usd_pan.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -76,6 +77,7 @@
             // main_tab
             // 
             this.main_tab.BackColor = System.Drawing.Color.Transparent;
+            this.main_tab.Controls.Add(this.button1);
             this.main_tab.Controls.Add(this.eur_lbl);
             this.main_tab.Controls.Add(this.eur_pan);
             this.main_tab.Controls.Add(this.bgn_pan);
@@ -116,25 +118,6 @@
             this.eur_pan.Name = "eur_pan";
             this.eur_pan.Size = new System.Drawing.Size(75, 59);
             this.eur_pan.TabIndex = 17;
-            // 
-            // usd_pan
-            // 
-            this.usd_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.usd_pan.Controls.Add(this.usd_lbl);
-            this.usd_pan.Location = new System.Drawing.Point(1115, 212);
-            this.usd_pan.Name = "usd_pan";
-            this.usd_pan.Size = new System.Drawing.Size(75, 59);
-            this.usd_pan.TabIndex = 16;
-            // 
-            // usd_lbl
-            // 
-            this.usd_lbl.AutoSize = true;
-            this.usd_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usd_lbl.Location = new System.Drawing.Point(3, 14);
-            this.usd_lbl.Name = "usd_lbl";
-            this.usd_lbl.Size = new System.Drawing.Size(64, 25);
-            this.usd_lbl.TabIndex = 1;
-            this.usd_lbl.Text = "label2";
             // 
             // bgn_pan
             // 
@@ -280,6 +263,25 @@
             this.eur_total.Size = new System.Drawing.Size(361, 59);
             this.eur_total.TabIndex = 14;
             // 
+            // usd_pan
+            // 
+            this.usd_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.usd_pan.Controls.Add(this.usd_lbl);
+            this.usd_pan.Location = new System.Drawing.Point(1115, 212);
+            this.usd_pan.Name = "usd_pan";
+            this.usd_pan.Size = new System.Drawing.Size(75, 59);
+            this.usd_pan.TabIndex = 16;
+            // 
+            // usd_lbl
+            // 
+            this.usd_lbl.AutoSize = true;
+            this.usd_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.usd_lbl.Location = new System.Drawing.Point(3, 14);
+            this.usd_lbl.Name = "usd_lbl";
+            this.usd_lbl.Size = new System.Drawing.Size(64, 25);
+            this.usd_lbl.TabIndex = 1;
+            this.usd_lbl.Text = "label2";
+            // 
             // detail_tab
             // 
             this.detail_tab.Location = new System.Drawing.Point(4, 31);
@@ -302,6 +304,17 @@
             this.charts_tab.Text = "Charts";
             this.charts_tab.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(23, 466);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 53);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Adjust Categories";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -316,8 +329,6 @@
             this.tabControl1.ResumeLayout(false);
             this.main_tab.ResumeLayout(false);
             this.main_tab.PerformLayout();
-            this.usd_pan.ResumeLayout(false);
-            this.usd_pan.PerformLayout();
             this.bgn_pan.ResumeLayout(false);
             this.bgn_pan.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -325,6 +336,8 @@
             this.recent_exp_pnl.PerformLayout();
             this.general_sum_pnl.ResumeLayout(false);
             this.general_sum_pnl.PerformLayout();
+            this.usd_pan.ResumeLayout(false);
+            this.usd_pan.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -354,6 +367,7 @@
         private System.Windows.Forms.Label eur_lbl;
         private System.Windows.Forms.Label usd_lbl;
         private System.Windows.Forms.Label bgn_lbl;
+        private System.Windows.Forms.Button button1;
     }
 }
 
