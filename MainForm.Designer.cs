@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.main_tab = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.eur_lbl = new System.Windows.Forms.Label();
             this.eur_pan = new System.Windows.Forms.Panel();
             this.bgn_pan = new System.Windows.Forms.Panel();
@@ -51,7 +52,6 @@
             this.usd_lbl = new System.Windows.Forms.Label();
             this.detail_tab = new System.Windows.Forms.TabPage();
             this.charts_tab = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.main_tab.SuspendLayout();
             this.bgn_pan.SuspendLayout();
@@ -100,6 +100,17 @@
             this.main_tab.Size = new System.Drawing.Size(1283, 641);
             this.main_tab.TabIndex = 0;
             this.main_tab.Text = "Main";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(23, 466);
+            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(133, 53);
+            this.button1.TabIndex = 18;
+            this.button1.Text = "Adjust Categories";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // eur_lbl
             // 
@@ -181,7 +192,7 @@
             this.rem_btn.Name = "rem_btn";
             this.rem_btn.Size = new System.Drawing.Size(133, 53);
             this.rem_btn.TabIndex = 8;
-            this.rem_btn.Text = "Remove";
+            this.rem_btn.Text = "Undo";
             this.rem_btn.UseVisualStyleBackColor = true;
             this.rem_btn.Click += new System.EventHandler(this.Rem_btn_Click);
             // 
@@ -303,17 +314,6 @@
             this.charts_tab.TabIndex = 3;
             this.charts_tab.Text = "Charts";
             this.charts_tab.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(23, 466);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 53);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Adjust Categories";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // MainForm
             // 
