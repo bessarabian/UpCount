@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using System.Collections.Generic;
+
 
 namespace UpCount
 {
@@ -8,6 +8,7 @@ namespace UpCount
     {
         double default_double = 0.0;
         public double money_spent { get; set; }
+        public int curr_result { get; set; }
         public AddExpenseForm()
         {
             InitializeComponent();
@@ -26,6 +27,19 @@ namespace UpCount
             {
                 money_spent = Convert.ToDouble(amount_textbox.Text);
                 DialogResult = DialogResult.OK;
+
+                switch (currency_cmbbox.SelectedItem)
+                {
+                    case Currency.Currencies.BGN:
+                        curr_result = 0;
+                        break;
+                    case Currency.Currencies.USD:
+                        curr_result = 1;
+                        break;
+                    case Currency.Currencies.EUR:
+                        curr_result = 2;
+                        break;
+                }
                 Close();
             }
         }
