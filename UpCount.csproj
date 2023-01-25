@@ -191,6 +191,7 @@
     <Compile Include="ConvertResultObj.cs" />
     <Compile Include="Currency.cs" />
     <Compile Include="DB_Control.cs" />
+    <Compile Include="Expense.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
