@@ -4,14 +4,14 @@ using System;
 
 namespace UpCount
 {
-    public partial class Expense
+    [BsonIgnoreExtraElements]
+    public class Expense
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string ID { get; set; }
-        [BsonRepresentation(BsonType.DateTime)]
-        public DateTime Date { get; set; }
-        public long Amount { get; set; }
+        public string Date { get; set; }
+        public double Amount { get; set; }
         public string Currency { get; set; }
         public string Subject { get; set; }
     }

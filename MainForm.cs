@@ -1,13 +1,12 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Driver;
-using MongoDB.Bson.Serialization;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using MongoDB.Bson.IO;
 using Newtonsoft.Json;
-
 
 namespace UpCount
 {
@@ -33,19 +32,23 @@ namespace UpCount
             eur_lbl.Text = Currency.Currencies.EUR.ToString();
 
             // filling datagridview
-            var coll = db_ctrl.GetCollect("consumptions", "expenses").Find(new BsonDocument()).ToList();
+            var db = db_ctrl.dbClient.GetDatabase("consumptions");
+            var coll = db.GetCollection<Expense>("expenses");
+            var docs = coll.Find("{}").ToList();
 
             List<Expense> exp = new List<Expense>();
 
-            foreach(var i in coll)
+            foreach (var i in docs)
             {
-                exp.Add(BsonSerializer.Deserialize<Expense>(i));
+                exp.Add(JsonConvert.);
             }
 
-            foreach(var i in exp)
+            foreach (Expense expense in exp)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(expense.ToJson());
             }
+
+            recent_exp.DataSource = exp;
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
@@ -67,14 +70,12 @@ namespace UpCount
                             total3.Text = Convert.ToString(Convert.ToInt64(total3.Text) + Convert.ToInt64(form2.money_spent));
                             break;
                     }
-                    db_ctrl.DatabaseInsertExpense(form2.money_spent, "mock", form2.Curr_result);
+
+                    string date = DateTime.Now.ToString("dd/MM/yyyy");
+
+                    db_ctrl.DatabaseInsertExpense(date, form2.money_spent, form2.Curr_result, "mock");
                 }
             }
-        }
-
-        private void Rem_btn_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

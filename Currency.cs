@@ -7,9 +7,9 @@ namespace UpCount
     {
         public enum Currencies
         {
-            BGN = 0,
-            USD = 1,
-            EUR = 2
+            BGN,
+            USD,
+            EUR
         }
 
         public void TestGetRequest(string to, string from, int amount)

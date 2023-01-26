@@ -6,41 +6,27 @@ namespace UpCount
 {
     public class DB_Control
     {
-        private MongoClient _dbClient;
+        public MongoClient dbClient;
         
         public DB_Control(string db_connection_string)
         {
-            _dbClient = new MongoClient(db_connection_string);
+             dbClient = new MongoClient(db_connection_string);
         }
 
-        public IMongoCollection<BsonDocument> GetCollect(string dbname, string collname)
+
+        public void DatabaseInsertExpense(string date, double amount, Currency.Currencies currency, string subject) 
         {
-            var database = _dbClient.GetDatabase(dbname);
-            var collection = database.GetCollection<BsonDocument>(collname);
-
-            return collection;
-        }
-
-        public void aaa()
-        {
-            var collection = GetCollect("consumptions", "expenses");
-
-            var result = collection.Find(new BsonDocument()).ToList();
-
-
-        }
-
-        public void DatabaseInsertExpense(double amount, string subject, Currency.Currencies currency) 
-        {
-            string date = DateTime.UtcNow.ToString("dd-MM-yyyy");
-            var collection = GetCollect("consumptions", "expenses");
+            var db = dbClient.GetDatabase("consumptions");
+            var collection = db.GetCollection<BsonDocument>("expenses");
             var document = new BsonDocument
             {
                 {"date", date},
                 {"amount", amount},
-                {"currency", currency.ToString()},
+                {"currency", currency},
                 {"subject", subject}
             };
+
+            Console.WriteLine($"currency: {currency}");
 
             collection.InsertOneAsync(document);
         }
