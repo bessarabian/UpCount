@@ -30,7 +30,11 @@ namespace UpCount
             usd_lbl.Text = Currency.Currencies.USD.ToString();
             eur_lbl.Text = Currency.Currencies.EUR.ToString();
 
-            // filling datagridview
+            GetAllExpenses();
+        }
+
+        public void GetAllExpenses()
+        {
             var db = db_ctrl.dbClient.GetDatabase("consumptions");
             var coll = db.GetCollection<Expense>("expenses");
 
@@ -60,8 +64,8 @@ namespace UpCount
                     }
 
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
-
                     db_ctrl.DatabaseInsertExpense(date, form2.money_spent, form2.Curr_result.ToString(), "mock");
+                    GetAllExpenses();
                 }
             }
         }

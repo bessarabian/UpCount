@@ -13,7 +13,6 @@ namespace UpCount
              dbClient = new MongoClient(db_connection_string);
         }
 
-
         public void DatabaseInsertExpense(string date, double amount, string currency, string subject) 
         {
             var db = dbClient.GetDatabase("consumptions");
@@ -25,9 +24,6 @@ namespace UpCount
                 {"currency", currency},
                 {"subject", subject}
             };
-
-            Console.WriteLine($"currency: {currency}");
-
             collection.InsertOneAsync(document);
         }
     }

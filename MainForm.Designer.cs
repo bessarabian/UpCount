@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.main_tab = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
             this.recent_exp_pnl = new System.Windows.Forms.Panel();
             this.recent_exp_lbl = new System.Windows.Forms.Label();
             this.eur_lbl = new System.Windows.Forms.Label();
@@ -47,12 +46,14 @@
             this.rem_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.recent_exp = new System.Windows.Forms.DataGridView();
             this.general_sum_pnl = new System.Windows.Forms.Panel();
             this.total_lbl = new System.Windows.Forms.Label();
             this.usd_total = new System.Windows.Forms.Panel();
             this.eur_total = new System.Windows.Forms.Panel();
             this.usd_pan = new System.Windows.Forms.Panel();
             this.usd_lbl = new System.Windows.Forms.Label();
+            this.detail_tab = new System.Windows.Forms.TabPage();
             this.charts_tab = new System.Windows.Forms.TabPage();
             this.six = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.five = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -60,16 +61,14 @@
             this.tree = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.two = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.one = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.detail_tab = new System.Windows.Forms.TabPage();
-            this.recent_exp = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.main_tab.SuspendLayout();
             this.recent_exp_pnl.SuspendLayout();
             this.bgn_pan.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.recent_exp)).BeginInit();
             this.general_sum_pnl.SuspendLayout();
             this.usd_pan.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recent_exp)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -87,7 +86,6 @@
             // main_tab
             // 
             this.main_tab.BackColor = System.Drawing.Color.Transparent;
-            this.main_tab.Controls.Add(this.button1);
             this.main_tab.Controls.Add(this.recent_exp_pnl);
             this.main_tab.Controls.Add(this.eur_lbl);
             this.main_tab.Controls.Add(this.eur_pan);
@@ -110,17 +108,6 @@
             this.main_tab.Size = new System.Drawing.Size(960, 519);
             this.main_tab.TabIndex = 0;
             this.main_tab.Text = "Main";
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(17, 379);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(100, 43);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Adjust Categories";
-            this.button1.UseVisualStyleBackColor = true;
             // 
             // recent_exp_pnl
             // 
@@ -256,6 +243,41 @@
             this.panel2.Size = new System.Drawing.Size(448, 268);
             this.panel2.TabIndex = 6;
             // 
+            // recent_exp
+            // 
+            this.recent_exp.AllowUserToAddRows = false;
+            this.recent_exp.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recent_exp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.recent_exp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.recent_exp.DefaultCellStyle = dataGridViewCellStyle2;
+            this.recent_exp.Location = new System.Drawing.Point(0, 46);
+            this.recent_exp.Name = "recent_exp";
+            this.recent_exp.ReadOnly = true;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recent_exp.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.recent_exp.Size = new System.Drawing.Size(447, 221);
+            this.recent_exp.TabIndex = 0;
+            // 
             // general_sum_pnl
             // 
             this.general_sum_pnl.BackColor = System.Drawing.Color.Transparent;
@@ -316,6 +338,16 @@
             this.usd_lbl.TabIndex = 1;
             this.usd_lbl.Text = "label2";
             // 
+            // detail_tab
+            // 
+            this.detail_tab.Location = new System.Drawing.Point(4, 26);
+            this.detail_tab.Name = "detail_tab";
+            this.detail_tab.Padding = new System.Windows.Forms.Padding(3);
+            this.detail_tab.Size = new System.Drawing.Size(960, 519);
+            this.detail_tab.TabIndex = 1;
+            this.detail_tab.Text = "Details";
+            this.detail_tab.UseVisualStyleBackColor = true;
+            // 
             // charts_tab
             // 
             this.charts_tab.Location = new System.Drawing.Point(4, 26);
@@ -362,51 +394,6 @@
             this.one.Name = "one";
             this.one.ReadOnly = true;
             // 
-            // detail_tab
-            // 
-            this.detail_tab.Location = new System.Drawing.Point(4, 26);
-            this.detail_tab.Name = "detail_tab";
-            this.detail_tab.Padding = new System.Windows.Forms.Padding(3);
-            this.detail_tab.Size = new System.Drawing.Size(960, 519);
-            this.detail_tab.TabIndex = 1;
-            this.detail_tab.Text = "Details";
-            this.detail_tab.UseVisualStyleBackColor = true;
-            // 
-            // recent_exp
-            // 
-            this.recent_exp.AllowUserToAddRows = false;
-            this.recent_exp.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.recent_exp.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.recent_exp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.recent_exp.DefaultCellStyle = dataGridViewCellStyle2;
-            this.recent_exp.Location = new System.Drawing.Point(0, 46);
-            this.recent_exp.Name = "recent_exp";
-            this.recent_exp.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.recent_exp.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.recent_exp.Size = new System.Drawing.Size(447, 221);
-            this.recent_exp.TabIndex = 0;
-            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -425,11 +412,11 @@
             this.bgn_pan.ResumeLayout(false);
             this.bgn_pan.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.recent_exp)).EndInit();
             this.general_sum_pnl.ResumeLayout(false);
             this.general_sum_pnl.PerformLayout();
             this.usd_pan.ResumeLayout(false);
             this.usd_pan.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.recent_exp)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -458,7 +445,6 @@
         private System.Windows.Forms.Label eur_lbl;
         private System.Windows.Forms.Label usd_lbl;
         private System.Windows.Forms.Label bgn_lbl;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TabPage detail_tab;
         private System.Windows.Forms.DataGridViewTextBoxColumn six;
         private System.Windows.Forms.DataGridViewTextBoxColumn five;
