@@ -43,7 +43,7 @@ namespace UpCount
         {
             using (AddExpenseForm form2 = new AddExpenseForm())
             {
-                DialogResult dr = form2.ShowDialog(); 
+                DialogResult dr = form2.ShowDialog();
                 if(dr == DialogResult.OK)
                 {
                     switch(form2.Curr_result)
@@ -61,7 +61,7 @@ namespace UpCount
 
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
 
-                    db_ctrl.DatabaseInsertExpense(date, form2.money_spent, form2.Curr_result, "mock");
+                    db_ctrl.DatabaseInsertExpense(date, form2.money_spent, form2.Curr_result.ToString(), "mock");
                 }
             }
         }

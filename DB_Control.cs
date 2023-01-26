@@ -14,7 +14,7 @@ namespace UpCount
         }
 
 
-        public void DatabaseInsertExpense(string date, double amount, Currency.Currencies currency, string subject) 
+        public void DatabaseInsertExpense(string date, double amount, string currency, string subject) 
         {
             var db = dbClient.GetDatabase("consumptions");
             var collection = db.GetCollection<BsonDocument>("expenses");
