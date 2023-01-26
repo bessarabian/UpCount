@@ -5,8 +5,7 @@ using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using MongoDB.Bson.IO;
-using Newtonsoft.Json;
+using MongoDB.Bson.Serialization;
 
 namespace UpCount
 {
@@ -34,19 +33,8 @@ namespace UpCount
             // filling datagridview
             var db = db_ctrl.dbClient.GetDatabase("consumptions");
             var coll = db.GetCollection<Expense>("expenses");
-            var docs = coll.Find("{}").ToList();
 
-            List<Expense> exp = new List<Expense>();
-
-            foreach (var i in docs)
-            {
-                exp.Add(JsonConvert.);
-            }
-
-            foreach (Expense expense in exp)
-            {
-                Console.WriteLine(expense.ToJson());
-            }
+            List<Expense> exp = coll.AsQueryable().ToList();
 
             recent_exp.DataSource = exp;
         }
