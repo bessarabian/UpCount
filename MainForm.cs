@@ -43,6 +43,11 @@ namespace UpCount
             recent_exp.DataSource = exp;
         }
 
+        public void GetTotalSpents()
+        {
+
+        }
+
         private void Add_btn_Click(object sender, EventArgs e)
         {
             using (AddExpenseForm form2 = new AddExpenseForm())
