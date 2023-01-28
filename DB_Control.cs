@@ -26,5 +26,16 @@ namespace UpCount
             };
             collection.InsertOneAsync(document);
         }
+
+        public string GetAllExpensesByCurrency(Currency.Currencies curr)
+        {
+            var db = dbClient.GetDatabase("consumptions");
+            var collection = db.GetCollection<BsonDocument>("totals");
+            var filter = Builders<BsonDocument>.Filter.Eq("Currency", curr.ToString());
+
+
+
+            return "ww";
+        }
     }
 }
