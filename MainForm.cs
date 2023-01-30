@@ -1,11 +1,10 @@
-﻿using MongoDB.Bson;
-using MongoDB.Driver;
+﻿using MongoDB.Driver;
 using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
 using System.Collections.Generic;
-using MongoDB.Bson.Serialization;
+
 
 namespace UpCount
 {
@@ -30,7 +29,15 @@ namespace UpCount
             usd_lbl.Text = Currency.Currencies.USD.ToString();
             eur_lbl.Text = Currency.Currencies.EUR.ToString();
 
+            // total spents
+            UpdateTotals();
+
+            // datagridview setup
+            recent_exp.Font = new Font("Arial", 9, FontStyle.Regular);
+
             GetAllExpenses();
+
+            Console.WriteLine(db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.BGN));
         }
 
         public void GetAllExpenses()
@@ -43,9 +50,11 @@ namespace UpCount
             recent_exp.DataSource = exp;
         }
 
-        public void GetTotalSpents()
+        public void UpdateTotals()
         {
-
+            total1.Text = db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.BGN);
+            total2.Text = db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.USD);
+            total3.Text = db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.EUR);
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
@@ -71,6 +80,7 @@ namespace UpCount
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
                     db_ctrl.DatabaseInsertExpense(date, form2.money_spent, form2.Curr_result.ToString(), "mock");
                     GetAllExpenses();
+                    UpdateTotals();
                 }
             }
         }

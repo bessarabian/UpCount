@@ -1,6 +1,8 @@
 ﻿using MongoDB.Driver;
 using MongoDB.Bson;
 using System;
+using System.Diagnostics.SymbolStore;
+using System.Collections.Generic;
 
 namespace UpCount
 {
@@ -30,12 +32,20 @@ namespace UpCount
         public string GetAllExpensesByCurrency(Currency.Currencies curr)
         {
             var db = dbClient.GetDatabase("consumptions");
-            var collection = db.GetCollection<BsonDocument>("totals");
-            var filter = Builders<BsonDocument>.Filter.Eq("Currency", curr.ToString());
+            var coll = db.GetCollection<Expense>("expenses");
 
+            List<Expense> exp = coll.AsQueryable().ToList();
+            var total_sum = 0;
 
+            foreach (var expense in exp)
+            {
+                if(expense.Currency == curr.ToString()){
+                    total_sum += (int)expense.Amount;
+                }
+                
+            }
 
-            return "ww";
+            return Convert.ToString(total_sum);
         }
     }
 }
