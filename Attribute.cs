@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace UpCount
 {
-    public class Currency
+    public class Attribute
     {
         public enum Currencies
         {

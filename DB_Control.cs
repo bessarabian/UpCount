@@ -29,14 +29,13 @@ namespace UpCount
             collection.InsertOneAsync(document);
         }
 
-        public string GetAllExpensesByCurrency(Currency.Currencies curr)
+        public string GetAllExpensesByCurrency(Attribute.Currencies curr)
         {
             var db = dbClient.GetDatabase("consumptions");
             var coll = db.GetCollection<Expense>("expenses");
 
             List<Expense> exp = coll.AsQueryable().ToList();
             var total_sum = 0;
-
             foreach (var expense in exp)
             {
                 if(expense.Currency == curr.ToString()){
@@ -44,7 +43,6 @@ namespace UpCount
                 }
                 
             }
-
             return Convert.ToString(total_sum);
         }
     }

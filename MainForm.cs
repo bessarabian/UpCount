@@ -19,25 +19,23 @@ namespace UpCount
         private void Form1_Load(object sender, EventArgs e)
         {
             // proper colors for panels
-            general_sum_pnl.BackColor = Color.FromArgb(86, 113, 137);
             recent_exp_pnl.BackColor = Color.FromArgb(86, 113, 137);
-            total_lbl.ForeColor = Color.White;
             recent_exp_lbl.ForeColor = Color.White;
 
             // rigth currency simbols
-            bgn_lbl.Text = Currency.Currencies.BGN.ToString();
-            usd_lbl.Text = Currency.Currencies.USD.ToString();
-            eur_lbl.Text = Currency.Currencies.EUR.ToString();
+            bgn_lbl.Text = Attribute.Currencies.BGN.ToString();
+            usd_lbl.Text = Attribute.Currencies.USD.ToString();
+            eur_lbl.Text = Attribute.Currencies.EUR.ToString();
 
             // total spents
             UpdateTotals();
 
             // datagridview setup
-            recent_exp.Font = new Font("Arial", 9, FontStyle.Regular);
+            recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
+            recent_exp.AutoResizeColumns();
+            recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             GetAllExpenses();
-
-            Console.WriteLine(db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.BGN));
         }
 
         public void GetAllExpenses()
@@ -52,9 +50,9 @@ namespace UpCount
 
         public void UpdateTotals()
         {
-            total1.Text = db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.BGN);
-            total2.Text = db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.USD);
-            total3.Text = db_ctrl.GetAllExpensesByCurrency(Currency.Currencies.EUR);
+            total1.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.BGN);
+            total2.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.USD);
+            total3.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.EUR);
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
@@ -66,13 +64,13 @@ namespace UpCount
                 {
                     switch(form2.Curr_result)
                     {
-                        case Currency.Currencies.BGN:
+                        case Attribute.Currencies.BGN:
                             total1.Text = Convert.ToString(Convert.ToInt64(total1.Text) + Convert.ToInt64(form2.money_spent));
                             break;
-                        case Currency.Currencies.USD:
+                        case Attribute.Currencies.USD:
                             total2.Text = Convert.ToString(Convert.ToInt64(total2.Text) + Convert.ToInt64(form2.money_spent));
                             break;
-                        case Currency.Currencies.EUR:
+                        case Attribute.Currencies.EUR:
                             total3.Text = Convert.ToString(Convert.ToInt64(total3.Text) + Convert.ToInt64(form2.money_spent));
                             break;
                     }
@@ -83,6 +81,15 @@ namespace UpCount
                     UpdateTotals();
                 }
             }
+        }
+
+        private void category_btn(object sender, EventArgs e)
+        {
+            using(CategoriesForm cat_form = new CategoriesForm())
+            {
+                DialogResult dr = cat_form.ShowDialog();
+            }
+
         }
     }
 }
