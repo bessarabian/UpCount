@@ -8,6 +8,7 @@ namespace UpCount
     {
         double default_double = 0.0;
         public double Money_spent { get; set; }
+        public string Selected_category { get; set; }
         public Attribute.Currencies Curr_result { get; set; }
         public AddExpenseForm()
         {
@@ -16,7 +17,7 @@ namespace UpCount
 
         private void AddExpenseForm_Load(object sender, EventArgs e)
         {
-            subject_cmbbox.DataSource = 
+            subject_cmbbox.DataSource = MainForm.db_ctrl.GetAllCategories();
             currency_cmbbox.DataSource = Enum.GetValues(typeof(Attribute.Currencies));
             Attribute.Currencies currency;
             Enum.TryParse(currency_cmbbox.SelectedValue.ToString(), result: out currency);
@@ -27,6 +28,7 @@ namespace UpCount
             if(double.TryParse(amount_textbox.Text,out default_double))
             {
                 Money_spent = Convert.ToDouble(amount_textbox.Text);
+                Selected_category = subject_cmbbox.Text;
                 DialogResult = DialogResult.OK;
 
                 switch (currency_cmbbox.SelectedItem)

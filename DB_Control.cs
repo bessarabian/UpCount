@@ -1,7 +1,6 @@
 ﻿using MongoDB.Driver;
 using MongoDB.Bson;
 using System;
-using System.Diagnostics.SymbolStore;
 using System.Collections.Generic;
 
 namespace UpCount
@@ -44,6 +43,37 @@ namespace UpCount
                 
             }
             return Convert.ToString(total_sum);
+        }
+
+        public void DatabaseInsertCategory(string category_name)
+        {
+            var db = dbClient.GetDatabase("consumptions");
+            var coll = db.GetCollection<BsonDocument>("categories");
+
+            var document = new BsonDocument
+            {
+                {"category_name", category_name}
+            };
+
+            coll.InsertOneAsync(document);
+        }
+
+        public List<string> GetAllCategories()
+        {
+            var db = dbClient.GetDatabase("consumptions");
+            var coll = db.GetCollection<Categories>("categories");
+            var filter = new BsonDocument();
+
+            List<Categories> categories = coll.AsQueryable().ToList();
+            List<string> names = new List<string>();
+
+            foreach(var i in categories)
+            {
+                names.Add(i.category_name.ToString());
+            }
+
+
+            return names;
         }
     }
 }

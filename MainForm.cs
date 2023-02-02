@@ -10,7 +10,7 @@ namespace UpCount
 {
     public partial class MainForm : Form
     {
-        DB_Control db_ctrl = new DB_Control("mongodb://localhost:27017"); // replace with smth decent in the end
+        public static DB_Control db_ctrl = new DB_Control("mongodb://localhost:27017"); // replace with smth decent in the end
         public MainForm()
         {
             InitializeComponent();
@@ -76,7 +76,7 @@ namespace UpCount
                     }
 
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
-                    db_ctrl.DatabaseInsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), "mock");
+                    db_ctrl.DatabaseInsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), form2.Selected_category.ToString());
                     GetAllExpenses();
                     UpdateTotals();
                 }

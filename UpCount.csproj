@@ -194,6 +194,7 @@
     <Compile Include="CategoriesForm.Designer.cs">
       <DependentUpon>CategoriesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Category.cs" />
     <Compile Include="ConvertResultObj.cs" />
     <Compile Include="Attribute.cs" />
     <Compile Include="DB_Control.cs" />

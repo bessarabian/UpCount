@@ -20,7 +20,7 @@ namespace UpCount
 
         private void Cat_btn_Click(object sender, EventArgs e)
         {
-            category_name = new_cat_txtbox.Text;
+            MainForm.db_ctrl.DatabaseInsertCategory(new_cat_txtbox.Text);
             DialogResult = DialogResult.OK;
             Close();
         }
