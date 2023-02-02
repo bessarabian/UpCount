@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.spenton_cmbbox = new System.Windows.Forms.ComboBox();
+            this.subject_cmbbox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.amount_textbox = new System.Windows.Forms.TextBox();
             this.confirm_exp_btn = new System.Windows.Forms.Button();
@@ -48,14 +48,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Spent on:";
             // 
-            // spenton_cmbbox
+            // subject_cmbbox
             // 
-            this.spenton_cmbbox.FormattingEnabled = true;
-            this.spenton_cmbbox.Location = new System.Drawing.Point(25, 53);
-            this.spenton_cmbbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.spenton_cmbbox.Name = "spenton_cmbbox";
-            this.spenton_cmbbox.Size = new System.Drawing.Size(195, 21);
-            this.spenton_cmbbox.TabIndex = 1;
+            this.subject_cmbbox.FormattingEnabled = true;
+            this.subject_cmbbox.Location = new System.Drawing.Point(25, 53);
+            this.subject_cmbbox.Margin = new System.Windows.Forms.Padding(2);
+            this.subject_cmbbox.Name = "subject_cmbbox";
+            this.subject_cmbbox.Size = new System.Drawing.Size(195, 21);
+            this.subject_cmbbox.TabIndex = 1;
             // 
             // label2
             // 
@@ -71,7 +71,7 @@
             // amount_textbox
             // 
             this.amount_textbox.Location = new System.Drawing.Point(25, 130);
-            this.amount_textbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.amount_textbox.Margin = new System.Windows.Forms.Padding(2);
             this.amount_textbox.Name = "amount_textbox";
             this.amount_textbox.Size = new System.Drawing.Size(195, 20);
             this.amount_textbox.TabIndex = 3;
@@ -80,7 +80,7 @@
             // 
             this.confirm_exp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.confirm_exp_btn.Location = new System.Drawing.Point(69, 287);
-            this.confirm_exp_btn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.confirm_exp_btn.Margin = new System.Windows.Forms.Padding(2);
             this.confirm_exp_btn.Name = "confirm_exp_btn";
             this.confirm_exp_btn.Size = new System.Drawing.Size(118, 46);
             this.confirm_exp_btn.TabIndex = 4;
@@ -103,7 +103,7 @@
             // 
             this.currency_cmbbox.FormattingEnabled = true;
             this.currency_cmbbox.Location = new System.Drawing.Point(25, 216);
-            this.currency_cmbbox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.currency_cmbbox.Margin = new System.Windows.Forms.Padding(2);
             this.currency_cmbbox.Name = "currency_cmbbox";
             this.currency_cmbbox.Size = new System.Drawing.Size(195, 21);
             this.currency_cmbbox.TabIndex = 6;
@@ -118,9 +118,9 @@
             this.Controls.Add(this.confirm_exp_btn);
             this.Controls.Add(this.amount_textbox);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.spenton_cmbbox);
+            this.Controls.Add(this.subject_cmbbox);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AddExpenseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddExpenseForm";
@@ -133,7 +133,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox spenton_cmbbox;
+        private System.Windows.Forms.ComboBox subject_cmbbox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox amount_textbox;
         private System.Windows.Forms.Button confirm_exp_btn;

@@ -65,18 +65,18 @@ namespace UpCount
                     switch(form2.Curr_result)
                     {
                         case Attribute.Currencies.BGN:
-                            total1.Text = Convert.ToString(Convert.ToInt64(total1.Text) + Convert.ToInt64(form2.money_spent));
+                            total1.Text = Convert.ToString(Convert.ToInt64(total1.Text) + Convert.ToInt64(form2.Money_spent));
                             break;
                         case Attribute.Currencies.USD:
-                            total2.Text = Convert.ToString(Convert.ToInt64(total2.Text) + Convert.ToInt64(form2.money_spent));
+                            total2.Text = Convert.ToString(Convert.ToInt64(total2.Text) + Convert.ToInt64(form2.Money_spent));
                             break;
                         case Attribute.Currencies.EUR:
-                            total3.Text = Convert.ToString(Convert.ToInt64(total3.Text) + Convert.ToInt64(form2.money_spent));
+                            total3.Text = Convert.ToString(Convert.ToInt64(total3.Text) + Convert.ToInt64(form2.Money_spent));
                             break;
                     }
 
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
-                    db_ctrl.DatabaseInsertExpense(date, form2.money_spent, form2.Curr_result.ToString(), "mock");
+                    db_ctrl.DatabaseInsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), "mock");
                     GetAllExpenses();
                     UpdateTotals();
                 }
@@ -88,6 +88,10 @@ namespace UpCount
             using(CategoriesForm cat_form = new CategoriesForm())
             {
                 DialogResult dr = cat_form.ShowDialog();
+                if(dr == DialogResult.OK)
+                {
+
+                }
             }
 
         }

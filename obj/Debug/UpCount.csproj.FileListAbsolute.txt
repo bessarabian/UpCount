@@ -110,3 +110,5 @@ C:\Users\gerem\Desktop\UpCount\bin\Debug\RestSharp.Serializers.NewtonsoftJson.xm
 C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Text.Encodings.Web.xml
 C:\Users\gerem\Desktop\UpCount\bin\Debug\System.Text.Json.xml
 C:\Users\gerem\Desktop\UpCount\bin\Debug\System.ValueTuple.xml
+C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.CategoriesForm.resources
+C:\Users\gerem\Desktop\UpCount\obj\Debug\UpCount.NewCategoryForm.resources

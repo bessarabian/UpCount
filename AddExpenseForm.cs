@@ -7,8 +7,8 @@ namespace UpCount
     public partial class AddExpenseForm : Form
     {
         double default_double = 0.0;
-        public double money_spent { get; set; }
-        public Currency.Currencies Curr_result { get; set; }
+        public double Money_spent { get; set; }
+        public Attribute.Currencies Curr_result { get; set; }
         public AddExpenseForm()
         {
             InitializeComponent();
@@ -16,28 +16,29 @@ namespace UpCount
 
         private void AddExpenseForm_Load(object sender, EventArgs e)
         {
-            currency_cmbbox.DataSource = Enum.GetValues(typeof(Currency.Currencies));
-            Currency.Currencies currency;
-            Enum.TryParse(currency_cmbbox.SelectedValue.ToString(), out currency);
+            subject_cmbbox.DataSource = 
+            currency_cmbbox.DataSource = Enum.GetValues(typeof(Attribute.Currencies));
+            Attribute.Currencies currency;
+            Enum.TryParse(currency_cmbbox.SelectedValue.ToString(), result: out currency);
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
             if(double.TryParse(amount_textbox.Text,out default_double))
             {
-                money_spent = Convert.ToDouble(amount_textbox.Text);
+                Money_spent = Convert.ToDouble(amount_textbox.Text);
                 DialogResult = DialogResult.OK;
 
                 switch (currency_cmbbox.SelectedItem)
                 {
-                    case Currency.Currencies.BGN:
-                        Curr_result = Currency.Currencies.BGN;
+                    case Attribute.Currencies.BGN:
+                        Curr_result = Attribute.Currencies.BGN;
                         break;
-                    case Currency.Currencies.USD:
-                        Curr_result = Currency.Currencies.USD;
+                    case Attribute.Currencies.USD:
+                        Curr_result = Attribute.Currencies.USD;
                         break;
-                    case Currency.Currencies.EUR:
-                        Curr_result = Currency.Currencies.EUR;
+                    case Attribute.Currencies.EUR:
+                        Curr_result = Attribute.Currencies.EUR;
                         break;
                 }
                 Close();

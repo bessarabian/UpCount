@@ -30,6 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.main_tab = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.cat_btn = new System.Windows.Forms.Button();
             this.recent_exp_pnl = new System.Windows.Forms.Panel();
             this.recent_exp_lbl = new System.Windows.Forms.Label();
@@ -78,6 +79,7 @@
             // main_tab
             // 
             this.main_tab.BackColor = System.Drawing.Color.Transparent;
+            this.main_tab.Controls.Add(this.button1);
             this.main_tab.Controls.Add(this.cat_btn);
             this.main_tab.Controls.Add(this.recent_exp_pnl);
             this.main_tab.Controls.Add(this.bgn_pan);
@@ -99,6 +101,17 @@
             this.main_tab.Size = new System.Drawing.Size(1171, 563);
             this.main_tab.TabIndex = 0;
             this.main_tab.Text = "Main";
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(995, 486);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(100, 43);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "Delete";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // cat_btn
             // 
@@ -232,7 +245,7 @@
             this.rem_btn.Name = "rem_btn";
             this.rem_btn.Size = new System.Drawing.Size(100, 43);
             this.rem_btn.TabIndex = 8;
-            this.rem_btn.Text = "Undo";
+            this.rem_btn.Text = "Undo Last";
             this.rem_btn.UseVisualStyleBackColor = true;
             // 
             // add_btn
@@ -389,6 +402,7 @@
         private System.Windows.Forms.Panel usd_pan;
         private System.Windows.Forms.Label usd_lbl;
         private System.Windows.Forms.Button cat_btn;
+        private System.Windows.Forms.Button button1;
     }
 }
 

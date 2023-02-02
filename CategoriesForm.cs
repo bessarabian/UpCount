@@ -15,11 +15,24 @@ namespace UpCount
         public CategoriesForm()
         {
             InitializeComponent();
+            /*cat_listbox.DataSource = */
         }
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Cat_btn_Click(object sender, EventArgs e)
+        {
+            using(NewCategoryForm newcat_form = new NewCategoryForm())
+            {
+                DialogResult dr = newcat_form.ShowDialog();
+                if(dr == DialogResult.OK)
+                {
+                    Console.WriteLine("Cat name: " + newcat_form.category_name);
+                }
+            }
         }
     }
 }
