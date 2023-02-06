@@ -10,7 +10,7 @@ namespace UpCount
 {
     public partial class MainForm : Form
     {
-        public static DB_Control db_ctrl = new DB_Control("mongodb://localhost:27017"); // replace with smth decent in the end
+        public static DB_Control db_ctrl;
         public MainForm()
         {
             InitializeComponent();
@@ -88,12 +88,7 @@ namespace UpCount
             using(CategoriesForm cat_form = new CategoriesForm())
             {
                 DialogResult dr = cat_form.ShowDialog();
-                if(dr == DialogResult.OK)
-                {
-
-                }
             }
-
         }
     }
 }

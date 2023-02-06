@@ -2,19 +2,20 @@
 using MongoDB.Bson;
 using System;
 using System.Collections.Generic;
+using Microsoft.Data.Sqlite;
+using System.IO;
 
 namespace UpCount
 {
     public class DB_Control
     {
         public MongoClient dbClient;
-        
+
         public DB_Control(string db_connection_string)
         {
-             dbClient = new MongoClient(db_connection_string);
         }
 
-        public void DatabaseInsertExpense(string date, double amount, string currency, string subject) 
+        public void DatabaseInsertExpense(string date, double amount, string currency, string subject)
         {
             var db = dbClient.GetDatabase("consumptions");
             var collection = db.GetCollection<BsonDocument>("expenses");
@@ -37,10 +38,10 @@ namespace UpCount
             var total_sum = 0;
             foreach (var expense in exp)
             {
-                if(expense.Currency == curr.ToString()){
+                if (expense.Currency == curr.ToString()) {
                     total_sum += (int)expense.Amount;
                 }
-                
+
             }
             return Convert.ToString(total_sum);
         }
@@ -67,13 +68,26 @@ namespace UpCount
             List<Categories> categories = coll.AsQueryable().ToList();
             List<string> names = new List<string>();
 
-            foreach(var i in categories)
+            foreach (var i in categories)
             {
                 names.Add(i.category_name.ToString());
             }
 
 
             return names;
+        }
+
+        public void AddExpense(string date, double amount, string currency, string subject)
+        {
+
+            using (var connection = new SqliteConnection("Data Source=database.db"))
+            {
+                connection.OpenAsync();
+                using (var cmd = new SqliteCommand())
+                {
+
+                }
+            };
         }
     }
 }
