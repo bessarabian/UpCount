@@ -9,7 +9,7 @@ namespace UpCount
 {
     public partial class MainForm : Form
     {
-        public DB_Control db_ctrl = new DB_Control();
+        public DB_Control db_ctrl = new();
         public MainForm()
         {
             InitializeComponent();
@@ -30,12 +30,10 @@ namespace UpCount
             /*UpdateTotals();*/
 
             // datagridview setup
-            recent_exp.DataSource = db_ctrl.LoadExpenses();
+            //recent_exp.DataSource = db_ctrl.LoadExpenses();
             recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-
-            db_ctrl.InitDB();
         }
 
         public void GetAllExpenses()
@@ -76,9 +74,9 @@ namespace UpCount
                     }
 
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
-                    //db_ctrl.DatabaseInsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), form2.Selected_category.ToString());
+                    Expense expense = new();
+                    db_ctrl.InsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), form2.Selected_category.ToString(), expense);
                     GetAllExpenses();
-                    UpdateTotals();
                 }
             }
         }
