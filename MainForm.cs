@@ -1,5 +1,4 @@
-﻿using MongoDB.Driver;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Linq;
 using System.Windows.Forms;
@@ -10,7 +9,7 @@ namespace UpCount
 {
     public partial class MainForm : Form
     {
-        public static DB_Control db_ctrl;
+        public DB_Control db_ctrl = new DB_Control();
         public MainForm()
         {
             InitializeComponent();
@@ -28,36 +27,37 @@ namespace UpCount
             eur_lbl.Text = Attribute.Currencies.EUR.ToString();
 
             // total spents
-            UpdateTotals();
+            /*UpdateTotals();*/
 
             // datagridview setup
+            recent_exp.DataSource = db_ctrl.LoadExpenses();
             recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            GetAllExpenses();
+            db_ctrl.InitDB();
         }
 
         public void GetAllExpenses()
         {
-            var db = db_ctrl.dbClient.GetDatabase("consumptions");
+            /*var db = db_ctrl.dbClient.GetDatabase("consumptions");
             var coll = db.GetCollection<Expense>("expenses");
 
             List<Expense> exp = coll.AsQueryable().ToList();
 
-            recent_exp.DataSource = exp;
+            recent_exp.DataSource = exp;*/
         }
 
         public void UpdateTotals()
         {
-            total1.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.BGN);
+            /*total1.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.BGN);
             total2.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.USD);
-            total3.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.EUR);
+            total3.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.EUR);*/
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
         {
-            using (AddExpenseForm form2 = new AddExpenseForm())
+            using (AddExpenseForm form2 = new())
             {
                 DialogResult dr = form2.ShowDialog();
                 if(dr == DialogResult.OK)
@@ -76,7 +76,7 @@ namespace UpCount
                     }
 
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
-                    db_ctrl.DatabaseInsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), form2.Selected_category.ToString());
+                    //db_ctrl.DatabaseInsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), form2.Selected_category.ToString());
                     GetAllExpenses();
                     UpdateTotals();
                 }
@@ -89,6 +89,11 @@ namespace UpCount
             {
                 DialogResult dr = cat_form.ShowDialog();
             }
+        }
+
+        private void Recent_exp_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

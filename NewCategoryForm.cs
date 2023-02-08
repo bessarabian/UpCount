@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace UpCount
@@ -20,7 +13,7 @@ namespace UpCount
 
         private void Cat_btn_Click(object sender, EventArgs e)
         {
-            MainForm.db_ctrl.DatabaseInsertCategory(new_cat_txtbox.Text);
+            /*MainForm.db_ctrl.DatabaseInsertCategory(new_cat_txtbox.Text);*/
             DialogResult = DialogResult.OK;
             Close();
         }

@@ -17,7 +17,7 @@ namespace UpCount
 
         private void AddExpenseForm_Load(object sender, EventArgs e)
         {
-            subject_cmbbox.DataSource = MainForm.db_ctrl.GetAllCategories();
+            /*subject_cmbbox.DataSource = MainForm.db_ctrl.GetAllCategories();*/
             currency_cmbbox.DataSource = Enum.GetValues(typeof(Attribute.Currencies));
             Attribute.Currencies currency;
             Enum.TryParse(currency_cmbbox.SelectedValue.ToString(), result: out currency);

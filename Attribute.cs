@@ -1,7 +1,4 @@
-﻿using RestSharp;
-using Newtonsoft.Json;
-
-namespace UpCount
+﻿namespace UpCount
 {
     public class Attribute
     {

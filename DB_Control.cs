@@ -1,80 +1,52 @@
-﻿using MongoDB.Driver;
-using MongoDB.Bson;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Microsoft.Data.Sqlite;
 using System.IO;
+using System.Data;
+using Dapper;
+using System.Linq;
 
 namespace UpCount
 {
     public class DB_Control
     {
-        public MongoClient dbClient;
-
-        public DB_Control(string db_connection_string)
+        public static string GetConnectionString()
         {
+            string[] files = Directory.GetFiles("../../", "*.sqlite", SearchOption.AllDirectories);
+            Console.WriteLine(files[0]);
+            return files[0].ToString();
         }
 
-        public void DatabaseInsertExpense(string date, double amount, string currency, string subject)
+        public void InitDB()
         {
-            var db = dbClient.GetDatabase("consumptions");
-            var collection = db.GetCollection<BsonDocument>("expenses");
-            var document = new BsonDocument
+            if (!File.Exists(@"../../db/database.sqlite"))
             {
-                {"date", date},
-                {"amount", amount},
-                {"currency", currency},
-                {"subject", subject}
-            };
-            collection.InsertOneAsync(document);
-        }
-
-        public string GetAllExpensesByCurrency(Attribute.Currencies curr)
-        {
-            var db = dbClient.GetDatabase("consumptions");
-            var coll = db.GetCollection<Expense>("expenses");
-
-            List<Expense> exp = coll.AsQueryable().ToList();
-            var total_sum = 0;
-            foreach (var expense in exp)
-            {
-                if (expense.Currency == curr.ToString()) {
-                    total_sum += (int)expense.Amount;
-                }
-
+                Console.WriteLine("No database file found, creating...");
+                File.Create(@"../../db/database.sqlite");
+                Console.WriteLine("Created database by following path: " + GetConnectionString());
             }
-            return Convert.ToString(total_sum);
+            Console.WriteLine("DB Inited.");
         }
 
-        public void DatabaseInsertCategory(string category_name)
+        public void CreateTable(SqliteConnection conn)
         {
-            var db = dbClient.GetDatabase("consumptions");
-            var coll = db.GetCollection<BsonDocument>("categories");
-
-            var document = new BsonDocument
-            {
-                {"category_name", category_name}
-            };
-
-            coll.InsertOneAsync(document);
+            SqliteCommand sqliteCmd = conn.CreateCommand();
+            sqliteCmd.CommandText = @"
+                   CREATE TABLE ""Expenses"" (
+	                ""ID""	INTEGER NOT NULL UNIQUE,
+	                ""AMOUNT""	REAL NOT NULL,
+                    ""DATE""	TEXT NOT NULL,
+                    ""CURRENCY""	TEXT NOT NULL,
+                    ""CATEGORY""	TEXT NOT NULL,
+                    PRIMARY KEY(""ID"" AUTOINCREMENT))";
+            sqliteCmd.ExecuteNonQuery();
         }
 
-        public List<string> GetAllCategories()
+        public List<Expense> LoadExpenses()
         {
-            var db = dbClient.GetDatabase("consumptions");
-            var coll = db.GetCollection<Categories>("categories");
-            var filter = new BsonDocument();
-
-            List<Categories> categories = coll.AsQueryable().ToList();
-            List<string> names = new List<string>();
-
-            foreach (var i in categories)
-            {
-                names.Add(i.category_name.ToString());
-            }
-
-
-            return names;
+            using IDbConnection cnn = new SqliteConnection(@"Data Source=../../db/database.sqlite");
+            var output = cnn.Query<Expense>("select * from Expenses");
+            return output.ToList();
         }
 
         public void AddExpense(string date, double amount, string currency, string subject)
