@@ -1,15 +1,15 @@
 ﻿using System;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
-using System.Collections.Generic;
-
+using System.ComponentModel;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace UpCount
 {
     public partial class MainForm : Form
     {
-        public DB_Control db_ctrl = new();
+        UpContext db = new();
         public MainForm()
         {
             InitializeComponent();
@@ -30,7 +30,7 @@ namespace UpCount
             /*UpdateTotals();*/
 
             // datagridview setup
-            //recent_exp.DataSource = db_ctrl.LoadExpenses();
+            recent_exp.DataSource = db.Expenses.ToList();
             recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -74,8 +74,13 @@ namespace UpCount
                     }
 
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
-                    Expense expense = new();
-                    db_ctrl.InsertExpense(date, form2.Money_spent, form2.Curr_result.ToString(), form2.Selected_category.ToString(), expense);
+
+                  
+                    Expense expense = new(form2.Money_spent, date, form2.Curr_result.ToString(), form2.Selected_category);
+                    db.Expenses.Add(expense);
+                    db.SaveChanges();
+                    Console.WriteLine("Objects are saved successfully!");
+
                     GetAllExpenses();
                 }
             }
