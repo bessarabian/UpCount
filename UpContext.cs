@@ -4,10 +4,17 @@ using UpCount;
 public class UpContext : DbContext
 {
     public DbSet<Expense> Expenses => Set<Expense>();
-    public UpContext() => Database.EnsureCreated();
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    public string DbPath { get; }
+    public UpContext()
     {
-        optionsBuilder.UseSqlite(DB_Control.GetConnectionString());
+        Console.WriteLine("UpContext() inited");
+        var folder = Environment.SpecialFolder.LocalApplicationData;
+        Console.WriteLine("folder: " + folder);
+        var path = Environment.GetFolderPath(folder);
+        Console.WriteLine("path: " + path);
+        DbPath = Path.Join(path, "blogging.db");
     }
+
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
+        => options.UseSqlite($"Data Source={DbPath}");
 }
