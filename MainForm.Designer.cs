@@ -278,7 +278,6 @@
             this.recent_exp.RowHeadersWidth = 51;
             this.recent_exp.Size = new System.Drawing.Size(1525, 357);
             this.recent_exp.TabIndex = 0;
-            this.recent_exp.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Recent_exp_CellContentClick);
             // 
             // usd_total
             // 

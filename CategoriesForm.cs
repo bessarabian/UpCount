@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows.Forms;
+﻿
 
 namespace UpCount
 {
@@ -10,12 +8,13 @@ namespace UpCount
         public CategoriesForm()
         {
             InitializeComponent();
-            /*RefreshCategories();*/
+            RefreshCategories();
         }
 
-        /*public void RefreshCategories(){
-            cat_listbox.DataSource = MainForm.db_ctrl.GetAllCategories();
-        }*/
+        public void RefreshCategories()
+        {
+            //cat_listbox.DataSource
+        }
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
         {

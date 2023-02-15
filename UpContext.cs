@@ -13,6 +13,7 @@ public class UpContext : DbContext
         var path = Environment.GetFolderPath(folder);
         Console.WriteLine("path: " + path);
         DbPath = Path.Join(path, "blogging.db");
+        Console.WriteLine("DB path: " + DbPath);
     }
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)

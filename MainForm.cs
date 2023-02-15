@@ -1,9 +1,4 @@
-﻿using System;
-using System.Drawing;
-using System.Windows.Forms;
-using System.ComponentModel;
-using Microsoft.EntityFrameworkCore;
-using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace UpCount
 {
@@ -30,7 +25,7 @@ namespace UpCount
             /*UpdateTotals();*/
 
             // datagridview setup
-            recent_exp.DataSource = db.Expenses.ToList();
+            GetAllExpenses();
             recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -38,23 +33,30 @@ namespace UpCount
 
         public void GetAllExpenses()
         {
-            /*var db = db_ctrl.dbClient.GetDatabase("consumptions");
-            var coll = db.GetCollection<Expense>("expenses");
+            recent_exp.DataSource = db.Expenses.ToList();
+        }
 
-            List<Expense> exp = coll.AsQueryable().ToList();
+        public void GetTotalByCurerency()
+        {
+            var all = db.Expenses.ToList();
 
-            recent_exp.DataSource = exp;*/
+            Console.WriteLine("GetTotalByCurrency()");
+            foreach(Expense exp in all)
+            {
+                Console.WriteLine("Currency: " + exp.Currency);
+            }
         }
 
         public void UpdateTotals()
         {
-            /*total1.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.BGN);
-            total2.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.USD);
-            total3.Text = db_ctrl.GetAllExpensesByCurrency(Attribute.Currencies.EUR);*/
+/*          total1.Text = 
+            total2.Text = 
+            total3.Text = */
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
         {
+
             using (AddExpenseForm form2 = new())
             {
                 DialogResult dr = form2.ShowDialog();
@@ -72,31 +74,21 @@ namespace UpCount
                             total3.Text = Convert.ToString(Convert.ToInt64(total3.Text) + Convert.ToInt64(form2.Money_spent));
                             break;
                     }
-
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
-
-                  
                     Expense expense = new(form2.Money_spent, date, form2.Curr_result.ToString(), form2.Selected_category);
                     db.Expenses.Add(expense);
                     db.SaveChanges();
-                    Console.WriteLine("Objects are saved successfully!");
-
-                    GetAllExpenses();
+                    GetAllExpenses();       
                 }
             }
         }
 
         private void category_btn(object sender, EventArgs e)
         {
-            using(CategoriesForm cat_form = new CategoriesForm())
+            using CategoriesForm cat_form = new();
             {
                 DialogResult dr = cat_form.ShowDialog();
             }
-        }
-
-        private void Recent_exp_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
     }
 }
