@@ -2,7 +2,7 @@
 using UpCount;
 
 public class UpContext : DbContext
-{
+{ 
     public DbSet<Expense> Expenses => Set<Expense>();
     public string DbPath { get; }
     public UpContext()

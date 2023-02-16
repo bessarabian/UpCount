@@ -1,4 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using System.Linq;
 
 namespace UpCount
 {
@@ -22,13 +22,15 @@ namespace UpCount
             eur_lbl.Text = Attribute.Currencies.EUR.ToString();
 
             // total spents
-            /*UpdateTotals();*/
+            UpdateTotals();
 
             // datagridview setup
             GetAllExpenses();
             recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            
         }
 
         public void GetAllExpenses()
@@ -36,22 +38,26 @@ namespace UpCount
             recent_exp.DataSource = db.Expenses.ToList();
         }
 
-        public void GetTotalByCurerency()
+        public string GetTotalByCurerency(string currency)
         {
             var all = db.Expenses.ToList();
+            List<Expense> sorted = all.Where(x => x.Currency == currency).ToList();
+            double sum = 0;
 
-            Console.WriteLine("GetTotalByCurrency()");
-            foreach(Expense exp in all)
+            foreach(var i in sorted)
             {
-                Console.WriteLine("Currency: " + exp.Currency);
+                sum += i.Amount;
             }
+
+            return sum.ToString();
         }
+
 
         public void UpdateTotals()
         {
-/*          total1.Text = 
-            total2.Text = 
-            total3.Text = */
+            total1.Text = GetTotalByCurerency("BGN");
+            total2.Text = GetTotalByCurerency("USD");
+            total3.Text = GetTotalByCurerency("EUR");
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
@@ -78,7 +84,8 @@ namespace UpCount
                     Expense expense = new(form2.Money_spent, date, form2.Curr_result.ToString(), form2.Selected_category);
                     db.Expenses.Add(expense);
                     db.SaveChanges();
-                    GetAllExpenses();       
+                    GetAllExpenses();
+                    UpdateTotals();
                 }
             }
         }
