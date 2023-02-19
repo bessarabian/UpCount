@@ -76,13 +76,13 @@ namespace UpCount
                     switch(form2.Curr_result)
                     {
                         case Attribute.Currencies.BGN:
-                            total1.Text = Convert.ToString(Convert.ToInt64(total1.Text) + Convert.ToInt64(form2.Money_spent));
+                            total1.Text = Convert.ToString(Convert.ToDouble(total1.Text) + Convert.ToDouble(form2.Money_spent));
                             break;
                         case Attribute.Currencies.USD:
-                            total2.Text = Convert.ToString(Convert.ToInt64(total2.Text) + Convert.ToInt64(form2.Money_spent));
+                            total2.Text = Convert.ToString(Convert.ToDouble(total2.Text) + Convert.ToDouble(form2.Money_spent));
                             break;
                         case Attribute.Currencies.EUR:
-                            total3.Text = Convert.ToString(Convert.ToInt64(total3.Text) + Convert.ToInt64(form2.Money_spent));
+                            total3.Text = Convert.ToString(Convert.ToDouble(total3.Text) + Convert.ToDouble(form2.Money_spent));
                             break;
                     }
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
