@@ -33,6 +33,7 @@ namespace UpCount
             recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            recent_exp.Columns["ID"].Visible= false;
 
             
         }

@@ -6,11 +6,13 @@ namespace UpCount
 {
     public partial class AddExpenseForm : Form
     {
+        UpContext db = new();
         public double Money_spent { get; set; }
         public string Selected_category { get; set; }
         public Attribute.Currencies Curr_result { get; set; }
         public AddExpenseForm()
         {
+            /*subject_cmbbox.DataSource = db.Categories.ToList();*/
             InitializeComponent();
         }
 
