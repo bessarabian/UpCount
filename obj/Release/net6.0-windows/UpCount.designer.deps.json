@@ -94,6 +94,11 @@
           }
         }
       },
+      "Microsoft.EntityFrameworkCore.Tools/7.0.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.Design": "7.0.3"
+        }
+      },
       "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Primitives": "7.0.0"
@@ -484,6 +489,13 @@
       "sha512": "sha512-w0yzGr1IDY4sp+RkFnVlWVF1N2lmaJHCmzVldZ/e36bXdT95E8N7/+JYWwKm1nLWEpS6naaoNtqQO6buRHTfAg==",
       "path": "microsoft.entityframeworkcore.sqlite.core/7.0.3",
       "hashPath": "microsoft.entityframeworkcore.sqlite.core.7.0.3.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.Tools/7.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yHFlYPZS3Jx7JMCQnGKfJzv95rJWVcmcUn/OW5cbCyWgQk81JJpTZ9Q6kkvwquYjFRfvYHBGuXNIYhAJokOBTQ==",
+      "path": "microsoft.entityframeworkcore.tools/7.0.3",
+      "hashPath": "microsoft.entityframeworkcore.tools.7.0.3.nupkg.sha512"
     },
     "Microsoft.Extensions.Caching.Abstractions/7.0.0": {
       "type": "package",

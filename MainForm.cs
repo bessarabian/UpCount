@@ -1,17 +1,21 @@
-﻿using System.Linq;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel;
 
 namespace UpCount
 {
     public partial class MainForm : Form
     {
-        UpContext db = new();
+        private UpContext db;
+
         public MainForm()
         {
             InitializeComponent();
+            db = new UpContext();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
             // proper colors for panels
             recent_exp_pnl.BackColor = Color.FromArgb(86, 113, 137);
             recent_exp_lbl.ForeColor = Color.White;
@@ -35,7 +39,8 @@ namespace UpCount
 
         public void GetAllExpenses()
         {
-            recent_exp.DataSource = db.Expenses.ToList();
+            var list = db.Expenses.ToList();
+            recent_exp.DataSource= list;
         }
 
         public string GetTotalByCurerency(string currency)
@@ -55,9 +60,9 @@ namespace UpCount
 
         public void UpdateTotals()
         {
-            total1.Text = GetTotalByCurerency("BGN");
-            total2.Text = GetTotalByCurerency("USD");
-            total3.Text = GetTotalByCurerency("EUR");
+            total1.Text = GetTotalByCurerency("BGN").ToString();
+            total2.Text = GetTotalByCurerency("USD").ToString();
+            total3.Text = GetTotalByCurerency("EUR").ToString();
         }
 
         private void Add_btn_Click(object sender, EventArgs e)
@@ -82,10 +87,17 @@ namespace UpCount
                     }
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
                     Expense expense = new(form2.Money_spent, date, form2.Curr_result.ToString(), form2.Selected_category);
+
+                    foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(expense))
+                    {
+                        string name = descriptor.Name;
+                        object value = descriptor.GetValue(expense);
+                        Console.WriteLine("{0}={1}", name, value);
+                    }
+
                     db.Expenses.Add(expense);
                     db.SaveChanges();
                     GetAllExpenses();
-                    UpdateTotals();
                 }
             }
         }

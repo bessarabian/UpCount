@@ -69,12 +69,12 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.main_tab);
-            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.tabControl1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tabControl1.Location = new System.Drawing.Point(0, 1);
-            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.tabControl1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1572, 738);
+            this.tabControl1.Size = new System.Drawing.Size(1572, 767);
             this.tabControl1.TabIndex = 0;
             // 
             // main_tab
@@ -95,33 +95,33 @@
             this.main_tab.Controls.Add(this.panel2);
             this.main_tab.Controls.Add(this.usd_total);
             this.main_tab.Controls.Add(this.eur_total);
-            this.main_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.main_tab.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.main_tab.Location = new System.Drawing.Point(4, 38);
-            this.main_tab.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.main_tab.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.main_tab.Name = "main_tab";
-            this.main_tab.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.main_tab.Size = new System.Drawing.Size(1564, 696);
+            this.main_tab.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.main_tab.Size = new System.Drawing.Size(1564, 725);
             this.main_tab.TabIndex = 0;
             this.main_tab.Text = "Main";
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(1327, 598);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button1.Location = new System.Drawing.Point(1327, 651);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 53);
+            this.button1.Size = new System.Drawing.Size(133, 66);
             this.button1.TabIndex = 19;
             this.button1.Text = "Delete";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // cat_btn
             // 
-            this.cat_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cat_btn.Location = new System.Drawing.Point(105, 598);
+            this.cat_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cat_btn.Location = new System.Drawing.Point(105, 651);
             this.cat_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat_btn.Name = "cat_btn";
-            this.cat_btn.Size = new System.Drawing.Size(133, 53);
+            this.cat_btn.Size = new System.Drawing.Size(133, 66);
             this.cat_btn.TabIndex = 18;
             this.cat_btn.Text = "Categories";
             this.cat_btn.UseVisualStyleBackColor = true;
@@ -131,17 +131,17 @@
             // 
             this.recent_exp_pnl.BackColor = System.Drawing.Color.Transparent;
             this.recent_exp_pnl.Controls.Add(this.recent_exp_lbl);
-            this.recent_exp_pnl.Location = new System.Drawing.Point(23, 46);
+            this.recent_exp_pnl.Location = new System.Drawing.Point(23, 13);
             this.recent_exp_pnl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recent_exp_pnl.Name = "recent_exp_pnl";
-            this.recent_exp_pnl.Size = new System.Drawing.Size(1527, 57);
+            this.recent_exp_pnl.Size = new System.Drawing.Size(1527, 71);
             this.recent_exp_pnl.TabIndex = 5;
             // 
             // recent_exp_lbl
             // 
             this.recent_exp_lbl.AutoSize = true;
-            this.recent_exp_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.recent_exp_lbl.Location = new System.Drawing.Point(631, 9);
+            this.recent_exp_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.recent_exp_lbl.Location = new System.Drawing.Point(631, 11);
             this.recent_exp_lbl.Name = "recent_exp_lbl";
             this.recent_exp_lbl.Size = new System.Drawing.Size(244, 36);
             this.recent_exp_lbl.TabIndex = 1;
@@ -151,17 +151,17 @@
             // 
             this.bgn_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bgn_pan.Controls.Add(this.bgn_lbl);
-            this.bgn_pan.Location = new System.Drawing.Point(381, 481);
+            this.bgn_pan.Location = new System.Drawing.Point(381, 556);
             this.bgn_pan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bgn_pan.Name = "bgn_pan";
-            this.bgn_pan.Size = new System.Drawing.Size(75, 59);
+            this.bgn_pan.Size = new System.Drawing.Size(75, 73);
             this.bgn_pan.TabIndex = 15;
             // 
             // bgn_lbl
             // 
             this.bgn_lbl.AutoSize = true;
-            this.bgn_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.bgn_lbl.Location = new System.Drawing.Point(4, 16);
+            this.bgn_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.bgn_lbl.Location = new System.Drawing.Point(4, 20);
             this.bgn_lbl.Name = "bgn_lbl";
             this.bgn_lbl.Size = new System.Drawing.Size(64, 25);
             this.bgn_lbl.TabIndex = 0;
@@ -171,17 +171,17 @@
             // 
             this.usd_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.usd_pan.Controls.Add(this.usd_lbl);
-            this.usd_pan.Location = new System.Drawing.Point(896, 481);
+            this.usd_pan.Location = new System.Drawing.Point(896, 556);
             this.usd_pan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usd_pan.Name = "usd_pan";
-            this.usd_pan.Size = new System.Drawing.Size(75, 59);
+            this.usd_pan.Size = new System.Drawing.Size(75, 73);
             this.usd_pan.TabIndex = 16;
             // 
             // usd_lbl
             // 
             this.usd_lbl.AutoSize = true;
-            this.usd_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.usd_lbl.Location = new System.Drawing.Point(3, 16);
+            this.usd_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usd_lbl.Location = new System.Drawing.Point(3, 20);
             this.usd_lbl.Name = "usd_lbl";
             this.usd_lbl.Size = new System.Drawing.Size(64, 25);
             this.usd_lbl.TabIndex = 1;
@@ -190,8 +190,8 @@
             // eur_lbl
             // 
             this.eur_lbl.AutoSize = true;
-            this.eur_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.eur_lbl.Location = new System.Drawing.Point(1392, 500);
+            this.eur_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.eur_lbl.Location = new System.Drawing.Point(1392, 580);
             this.eur_lbl.Name = "eur_lbl";
             this.eur_lbl.Size = new System.Drawing.Size(64, 25);
             this.eur_lbl.TabIndex = 2;
@@ -200,16 +200,16 @@
             // eur_pan
             // 
             this.eur_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.eur_pan.Location = new System.Drawing.Point(1388, 481);
+            this.eur_pan.Location = new System.Drawing.Point(1388, 556);
             this.eur_pan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.eur_pan.Name = "eur_pan";
-            this.eur_pan.Size = new System.Drawing.Size(75, 59);
+            this.eur_pan.Size = new System.Drawing.Size(75, 73);
             this.eur_pan.TabIndex = 17;
             // 
             // total3
             // 
             this.total3.AutoSize = true;
-            this.total3.Location = new System.Drawing.Point(1105, 495);
+            this.total3.Location = new System.Drawing.Point(1105, 574);
             this.total3.Name = "total3";
             this.total3.Size = new System.Drawing.Size(32, 36);
             this.total3.TabIndex = 11;
@@ -218,7 +218,7 @@
             // total1
             // 
             this.total1.AutoSize = true;
-            this.total1.Location = new System.Drawing.Point(99, 496);
+            this.total1.Location = new System.Drawing.Point(99, 575);
             this.total1.Name = "total1";
             this.total1.Size = new System.Drawing.Size(32, 36);
             this.total1.TabIndex = 9;
@@ -227,30 +227,30 @@
             // bgn_total
             // 
             this.bgn_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.bgn_total.Location = new System.Drawing.Point(96, 481);
+            this.bgn_total.Location = new System.Drawing.Point(96, 556);
             this.bgn_total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bgn_total.Name = "bgn_total";
-            this.bgn_total.Size = new System.Drawing.Size(361, 59);
+            this.bgn_total.Size = new System.Drawing.Size(361, 73);
             this.bgn_total.TabIndex = 12;
             // 
             // rem_btn
             // 
-            this.rem_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rem_btn.Location = new System.Drawing.Point(907, 598);
+            this.rem_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rem_btn.Location = new System.Drawing.Point(907, 651);
             this.rem_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.rem_btn.Name = "rem_btn";
-            this.rem_btn.Size = new System.Drawing.Size(133, 53);
+            this.rem_btn.Size = new System.Drawing.Size(133, 66);
             this.rem_btn.TabIndex = 8;
             this.rem_btn.Text = "Undo Last";
             this.rem_btn.UseVisualStyleBackColor = true;
             // 
             // add_btn
             // 
-            this.add_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.add_btn.Location = new System.Drawing.Point(513, 598);
+            this.add_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.add_btn.Location = new System.Drawing.Point(513, 651);
             this.add_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.add_btn.Name = "add_btn";
-            this.add_btn.Size = new System.Drawing.Size(133, 53);
+            this.add_btn.Size = new System.Drawing.Size(133, 66);
             this.add_btn.TabIndex = 7;
             this.add_btn.Text = "Add";
             this.add_btn.UseVisualStyleBackColor = true;
@@ -260,10 +260,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Transparent;
             this.panel2.Controls.Add(this.recent_exp);
-            this.panel2.Location = new System.Drawing.Point(23, 46);
+            this.panel2.Location = new System.Drawing.Point(23, 13);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1524, 404);
+            this.panel2.Size = new System.Drawing.Size(1524, 505);
             this.panel2.TabIndex = 6;
             // 
             // recent_exp
@@ -271,28 +271,28 @@
             this.recent_exp.AllowUserToAddRows = false;
             this.recent_exp.AllowUserToDeleteRows = false;
             this.recent_exp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.recent_exp.Location = new System.Drawing.Point(1, 48);
-            this.recent_exp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.recent_exp.Location = new System.Drawing.Point(0, 71);
+            this.recent_exp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.recent_exp.Name = "recent_exp";
             this.recent_exp.ReadOnly = true;
             this.recent_exp.RowHeadersWidth = 51;
-            this.recent_exp.Size = new System.Drawing.Size(1525, 357);
+            this.recent_exp.Size = new System.Drawing.Size(1525, 434);
             this.recent_exp.TabIndex = 0;
             // 
             // usd_total
             // 
             this.usd_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.usd_total.Controls.Add(this.total2);
-            this.usd_total.Location = new System.Drawing.Point(609, 481);
+            this.usd_total.Location = new System.Drawing.Point(609, 556);
             this.usd_total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usd_total.Name = "usd_total";
-            this.usd_total.Size = new System.Drawing.Size(361, 59);
+            this.usd_total.Size = new System.Drawing.Size(361, 73);
             this.usd_total.TabIndex = 13;
             // 
             // total2
             // 
             this.total2.AutoSize = true;
-            this.total2.Location = new System.Drawing.Point(3, 12);
+            this.total2.Location = new System.Drawing.Point(3, 15);
             this.total2.Name = "total2";
             this.total2.Size = new System.Drawing.Size(32, 36);
             this.total2.TabIndex = 10;
@@ -301,10 +301,10 @@
             // eur_total
             // 
             this.eur_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.eur_total.Location = new System.Drawing.Point(1103, 481);
+            this.eur_total.Location = new System.Drawing.Point(1103, 556);
             this.eur_total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.eur_total.Name = "eur_total";
-            this.eur_total.Size = new System.Drawing.Size(361, 59);
+            this.eur_total.Size = new System.Drawing.Size(361, 73);
             this.eur_total.TabIndex = 14;
             // 
             // six
@@ -357,11 +357,11 @@
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1571, 741);
+            this.ClientSize = new System.Drawing.Size(1571, 765);
             this.Controls.Add(this.tabControl1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpCount";

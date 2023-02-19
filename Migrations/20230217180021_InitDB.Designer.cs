@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace UpCount.Migrations
 {
     [DbContext(typeof(UpContext))]
-    [Migration("20230214141257_InitialCreate")]
-    partial class InitialCreate
+    [Migration("20230217180021_InitDB")]
+    partial class InitDB
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "2W9y080+iT9kPDHhB6d5bQpY5t4Pxkhu1WP5yNKFj/lYqnz5un3x6vs716pTTq/8nS5xKc1ncQDXGxHj6+mvBA==",
+  "dgSpecHash": "yYL8Ja/BtM5U6m3YJ2Vnb8U2hjOVg8qkdBDPf56CLDzJH1rZAg65hGmG7NdizNbL9I7VzWIbpCHk0WifaWPk1w==",
   "success": true,
   "projectFilePath": "C:\\Users\\gerem\\Desktop\\UpCount\\UpCount.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\gerem\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\7.0.3\\microsoft.entityframeworkcore.relational.7.0.3.nupkg.sha512",
     "C:\\Users\\gerem\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\7.0.3\\microsoft.entityframeworkcore.sqlite.7.0.3.nupkg.sha512",
     "C:\\Users\\gerem\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\7.0.3\\microsoft.entityframeworkcore.sqlite.core.7.0.3.nupkg.sha512",
+    "C:\\Users\\gerem\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\7.0.3\\microsoft.entityframeworkcore.tools.7.0.3.nupkg.sha512",
     "C:\\Users\\gerem\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\7.0.0\\microsoft.extensions.caching.abstractions.7.0.0.nupkg.sha512",
     "C:\\Users\\gerem\\.nuget\\packages\\microsoft.extensions.caching.memory\\7.0.0\\microsoft.extensions.caching.memory.7.0.0.nupkg.sha512",
     "C:\\Users\\gerem\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
