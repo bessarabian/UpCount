@@ -10,7 +10,7 @@ public class UpContext : DbContext
     {
         if (!options.IsConfigured)
         {
-            options.UseSqlite("Data Source=database.db");
+            options.UseSqlite("Data Source=C:\\Users\\gerem\\Desktop\\UpCount\\bin\\Debug\\net6.0-windows\\database.db");
         }
     }
 

@@ -1,16 +1,16 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
+using System.Windows.Forms;
 
 namespace UpCount
 {
     public partial class MainForm : Form
     {
-        private UpContext db;
+        public static UpContext db = new();
 
         public MainForm()
         {
             InitializeComponent();
-            db = new UpContext();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -88,14 +88,6 @@ namespace UpCount
                     }
                     string date = DateTime.Now.ToString("dd/MM/yyyy");
                     Expense expense = new(form2.Money_spent, date, form2.Curr_result.ToString(), form2.Selected_category);
-
-                    foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(expense))
-                    {
-                        string name = descriptor.Name;
-                        object value = descriptor.GetValue(expense);
-                        Console.WriteLine("{0}={1}", name, value);
-                    }
-
                     db.Expenses.Add(expense);
                     db.SaveChanges();
                     GetAllExpenses();
@@ -109,6 +101,16 @@ namespace UpCount
             {
                 DialogResult dr = cat_form.ShowDialog();
             }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+                
+                var row_data = recent_exp.Rows[row.Index].Cells[0].Value.ToString();
+                var id = Int.Parse(row_data);
+                var ent = db.Find<Expense>(id);
+
+                db.Remove(ent)
         }
     }
 }

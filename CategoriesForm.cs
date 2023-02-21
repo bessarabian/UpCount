@@ -1,6 +1,4 @@
-﻿
-
-namespace UpCount
+﻿namespace UpCount
 {
     public partial class CategoriesForm : Form
     {
@@ -13,7 +11,14 @@ namespace UpCount
 
         public void RefreshCategories()
         {
-            //cat_listbox.DataSource
+            var all_categories = MainForm.db.Categories.ToList();
+            List<string> names = new List<string>();
+            foreach (var category in all_categories)
+            {
+                names.Add(category.Name);
+            }
+
+            cat_listbox.DataSource = names;
         }
 
         private void ListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -28,7 +33,7 @@ namespace UpCount
                 DialogResult dr = newcat_form.ShowDialog();
                 if (dr == DialogResult.OK)
                 {
-                    /*RefreshCategories();*/
+                    RefreshCategories();
                 }
             }
         }

@@ -1,23 +1,32 @@
-﻿using System;
-using System.Windows.Forms;
-
-
-namespace UpCount
+﻿namespace UpCount
 {
     public partial class AddExpenseForm : Form
     {
-        UpContext db = new();
         public double Money_spent { get; set; }
         public string Selected_category { get; set; }
         public Attribute.Currencies Curr_result { get; set; }
         public AddExpenseForm()
         {
-            /*subject_cmbbox.DataSource = db.Categories.ToList();*/
+            
             InitializeComponent();
         }
 
         private void AddExpenseForm_Load(object sender, EventArgs e)
         {
+            try
+            {
+                var cat = MainForm.db.Categories.ToList();
+                List<string> res = new();
+                foreach (var c in cat)
+                {
+                    res.Add(c.Name.ToString());
+                }
+                subject_cmbbox.DataSource = res;
+            }
+            catch (NullReferenceException)
+            {
+                MessageBox.Show("You do not have any Categories! Add them by clicking \"Categories\" > \"Add\" ", "No Categories", MessageBoxButtons.OK);
+            }
             currency_cmbbox.DataSource = Enum.GetValues(typeof(Attribute.Currencies));
             _ = Enum.TryParse(currency_cmbbox.SelectedValue.ToString(), result: out Attribute.Currencies _);
         }
