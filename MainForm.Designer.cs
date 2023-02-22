@@ -43,7 +43,6 @@
             this.total3 = new System.Windows.Forms.Label();
             this.total1 = new System.Windows.Forms.Label();
             this.bgn_total = new System.Windows.Forms.Panel();
-            this.rem_btn = new System.Windows.Forms.Button();
             this.add_btn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.recent_exp = new System.Windows.Forms.DataGridView();
@@ -90,7 +89,6 @@
             this.main_tab.Controls.Add(this.total3);
             this.main_tab.Controls.Add(this.total1);
             this.main_tab.Controls.Add(this.bgn_total);
-            this.main_tab.Controls.Add(this.rem_btn);
             this.main_tab.Controls.Add(this.add_btn);
             this.main_tab.Controls.Add(this.panel2);
             this.main_tab.Controls.Add(this.usd_total);
@@ -107,7 +105,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(1327, 651);
+            this.button1.Location = new System.Drawing.Point(1105, 649);
             this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(133, 66);
@@ -119,7 +117,7 @@
             // cat_btn
             // 
             this.cat_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cat_btn.Location = new System.Drawing.Point(105, 651);
+            this.cat_btn.Location = new System.Drawing.Point(324, 649);
             this.cat_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat_btn.Name = "cat_btn";
             this.cat_btn.Size = new System.Drawing.Size(133, 66);
@@ -132,7 +130,7 @@
             // 
             this.recent_exp_pnl.BackColor = System.Drawing.Color.Transparent;
             this.recent_exp_pnl.Controls.Add(this.recent_exp_lbl);
-            this.recent_exp_pnl.Location = new System.Drawing.Point(23, 13);
+            this.recent_exp_pnl.Location = new System.Drawing.Point(22, 13);
             this.recent_exp_pnl.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.recent_exp_pnl.Name = "recent_exp_pnl";
             this.recent_exp_pnl.Size = new System.Drawing.Size(1527, 71);
@@ -142,7 +140,7 @@
             // 
             this.recent_exp_lbl.AutoSize = true;
             this.recent_exp_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.recent_exp_lbl.Location = new System.Drawing.Point(631, 11);
+            this.recent_exp_lbl.Location = new System.Drawing.Point(630, 11);
             this.recent_exp_lbl.Name = "recent_exp_lbl";
             this.recent_exp_lbl.Size = new System.Drawing.Size(244, 36);
             this.recent_exp_lbl.TabIndex = 1;
@@ -234,21 +232,10 @@
             this.bgn_total.Size = new System.Drawing.Size(361, 73);
             this.bgn_total.TabIndex = 12;
             // 
-            // rem_btn
-            // 
-            this.rem_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.rem_btn.Location = new System.Drawing.Point(907, 651);
-            this.rem_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.rem_btn.Name = "rem_btn";
-            this.rem_btn.Size = new System.Drawing.Size(133, 66);
-            this.rem_btn.TabIndex = 8;
-            this.rem_btn.Text = "Undo Last";
-            this.rem_btn.UseVisualStyleBackColor = true;
-            // 
             // add_btn
             // 
             this.add_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.add_btn.Location = new System.Drawing.Point(513, 651);
+            this.add_btn.Location = new System.Drawing.Point(716, 651);
             this.add_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(133, 66);
@@ -271,13 +258,14 @@
             // 
             this.recent_exp.AllowUserToAddRows = false;
             this.recent_exp.AllowUserToDeleteRows = false;
+            this.recent_exp.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.recent_exp.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.recent_exp.Location = new System.Drawing.Point(0, 71);
+            this.recent_exp.Location = new System.Drawing.Point(1, 71);
             this.recent_exp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.recent_exp.Name = "recent_exp";
             this.recent_exp.ReadOnly = true;
             this.recent_exp.RowHeadersWidth = 51;
-            this.recent_exp.Size = new System.Drawing.Size(1525, 434);
+            this.recent_exp.Size = new System.Drawing.Size(1523, 434);
             this.recent_exp.TabIndex = 0;
             // 
             // usd_total
@@ -388,7 +376,6 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage main_tab;
-        private System.Windows.Forms.Button rem_btn;
         private System.Windows.Forms.Button add_btn;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel recent_exp_pnl;

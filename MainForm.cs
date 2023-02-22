@@ -33,15 +33,15 @@ namespace UpCount
             recent_exp.Font = new Font("Arial", 12, FontStyle.Regular);
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            recent_exp.Columns["ID"].Visible= false;
+            recent_exp.Columns["ID"].Visible = false;
 
-            
+
         }
 
         public void GetAllExpenses()
         {
             var list = db.Expenses.ToList();
-            recent_exp.DataSource= list;
+            recent_exp.DataSource = list;
         }
 
         public string GetTotalByCurerency(string currency)
@@ -50,7 +50,7 @@ namespace UpCount
             List<Expense> sorted = all.Where(x => x.Currency == currency).ToList();
             double sum = 0;
 
-            foreach(var i in sorted)
+            foreach (var i in sorted)
             {
                 sum += i.Amount;
             }
@@ -72,9 +72,9 @@ namespace UpCount
             using (AddExpenseForm form2 = new())
             {
                 DialogResult dr = form2.ShowDialog();
-                if(dr == DialogResult.OK)
+                if (dr == DialogResult.OK)
                 {
-                    switch(form2.Curr_result)
+                    switch (form2.Curr_result)
                     {
                         case Attribute.Currencies.BGN:
                             total1.Text = Convert.ToString(Convert.ToDouble(total1.Text) + Convert.ToDouble(form2.Money_spent));
@@ -105,12 +105,30 @@ namespace UpCount
 
         private void Button1_Click(object sender, EventArgs e)
         {
-                
-                var row_data = recent_exp.Rows[row.Index].Cells[0].Value.ToString();
-                var id = Int.Parse(row_data);
-                var ent = db.Find<Expense>(id);
+            int selectedRowCount =
+                recent_exp.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if (selectedRowCount > 0)
+            {
 
-                db.Remove(ent)
+                for (int i = 0; i < selectedRowCount; i++)
+                {
+                    var val = recent_exp[0, recent_exp.SelectedRows[i].Index].Value.ToString();
+
+                    var res = db.Expenses.SingleOrDefault(x => x.Id == Int32.Parse(val));
+
+                    foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(res))
+                    {
+                        string name = descriptor.Name;
+                        object value = descriptor.GetValue(res);
+                        Console.WriteLine("{0}={1}", name, value);
+                    }
+
+                    db.Remove(res);
+                    db.SaveChanges();
+                }
+            }
+
+            GetAllExpenses();
         }
     }
 }
