@@ -35,6 +35,7 @@
             this.confirm_exp_btn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.currency_cmbbox = new System.Windows.Forms.ComboBox();
+            this.cancel_btn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -76,11 +77,11 @@
             // 
             // confirm_exp_btn
             // 
-            this.confirm_exp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.confirm_exp_btn.Location = new System.Drawing.Point(92, 441);
+            this.confirm_exp_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.confirm_exp_btn.Location = new System.Drawing.Point(33, 449);
             this.confirm_exp_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.confirm_exp_btn.Name = "confirm_exp_btn";
-            this.confirm_exp_btn.Size = new System.Drawing.Size(157, 71);
+            this.confirm_exp_btn.Size = new System.Drawing.Size(109, 39);
             this.confirm_exp_btn.TabIndex = 4;
             this.confirm_exp_btn.Text = "Confirm";
             this.confirm_exp_btn.UseVisualStyleBackColor = true;
@@ -105,11 +106,24 @@
             this.currency_cmbbox.Size = new System.Drawing.Size(259, 28);
             this.currency_cmbbox.TabIndex = 6;
             // 
+            // cancel_btn
+            // 
+            this.cancel_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cancel_btn.Location = new System.Drawing.Point(183, 449);
+            this.cancel_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cancel_btn.Name = "cancel_btn";
+            this.cancel_btn.Size = new System.Drawing.Size(109, 39);
+            this.cancel_btn.TabIndex = 7;
+            this.cancel_btn.Text = "Cancel";
+            this.cancel_btn.UseVisualStyleBackColor = true;
+            this.cancel_btn.Click += new System.EventHandler(this.Cancel_btn_Click);
+            // 
             // AddExpenseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 562);
+            this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.currency_cmbbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.confirm_exp_btn);
@@ -136,5 +150,6 @@
         private System.Windows.Forms.Button confirm_exp_btn;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox currency_cmbbox;
+        private Button cancel_btn;
     }
 }

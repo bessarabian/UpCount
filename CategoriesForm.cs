@@ -1,4 +1,6 @@
-﻿namespace UpCount
+﻿using System.Windows.Forms;
+
+namespace UpCount
 {
     public partial class CategoriesForm : Form
     {
@@ -36,6 +38,28 @@
                     RefreshCategories();
                 }
             }
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            if(cat_listbox.SelectedItems.Count > 0)
+            {
+                foreach (var item in cat_listbox.SelectedItems)
+                {
+                    var res = MainForm.db.Categories.SingleOrDefault(x => x.Name == item.ToString());
+
+                    MainForm.db.Remove(res);
+                    MainForm.db.SaveChanges();
+                }
+
+                RefreshCategories();
+            }
+            
+        }
+
+        private void Cancel_btn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -15,7 +15,6 @@ namespace UpCount
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
             // proper colors for panels
             recent_exp_pnl.BackColor = Color.FromArgb(86, 113, 137);
             recent_exp_lbl.ForeColor = Color.White;
@@ -109,12 +108,11 @@ namespace UpCount
                 recent_exp.Rows.GetRowCount(DataGridViewElementStates.Selected);
             if (selectedRowCount > 0)
             {
-
                 for (int i = 0; i < selectedRowCount; i++)
                 {
                     var val = recent_exp[0, recent_exp.SelectedRows[i].Index].Value.ToString();
 
-                    var res = db.Expenses.SingleOrDefault(x => x.Id == Int32.Parse(val));
+                    var res = db.Expenses.SingleOrDefault(x => x.Id == int.Parse(val));
 
                     foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(res))
                     {

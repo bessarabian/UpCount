@@ -30,7 +30,7 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.main_tab = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
+            this.del_btn = new System.Windows.Forms.Button();
             this.cat_btn = new System.Windows.Forms.Button();
             this.recent_exp_pnl = new System.Windows.Forms.Panel();
             this.recent_exp_lbl = new System.Windows.Forms.Label();
@@ -79,7 +79,7 @@
             // main_tab
             // 
             this.main_tab.BackColor = System.Drawing.Color.Transparent;
-            this.main_tab.Controls.Add(this.button1);
+            this.main_tab.Controls.Add(this.del_btn);
             this.main_tab.Controls.Add(this.cat_btn);
             this.main_tab.Controls.Add(this.recent_exp_pnl);
             this.main_tab.Controls.Add(this.bgn_pan);
@@ -102,22 +102,22 @@
             this.main_tab.TabIndex = 0;
             this.main_tab.Text = "Main";
             // 
-            // button1
+            // del_btn
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button1.Location = new System.Drawing.Point(1105, 649);
-            this.button1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 66);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            this.del_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.del_btn.Location = new System.Drawing.Point(1103, 615);
+            this.del_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.del_btn.Name = "del_btn";
+            this.del_btn.Size = new System.Drawing.Size(133, 66);
+            this.del_btn.TabIndex = 19;
+            this.del_btn.Text = "Delete";
+            this.del_btn.UseVisualStyleBackColor = true;
+            this.del_btn.Click += new System.EventHandler(this.Button1_Click);
             // 
             // cat_btn
             // 
             this.cat_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.cat_btn.Location = new System.Drawing.Point(324, 649);
+            this.cat_btn.Location = new System.Drawing.Point(324, 615);
             this.cat_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cat_btn.Name = "cat_btn";
             this.cat_btn.Size = new System.Drawing.Size(133, 66);
@@ -150,7 +150,7 @@
             // 
             this.bgn_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.bgn_pan.Controls.Add(this.bgn_lbl);
-            this.bgn_pan.Location = new System.Drawing.Point(381, 556);
+            this.bgn_pan.Location = new System.Drawing.Point(381, 507);
             this.bgn_pan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bgn_pan.Name = "bgn_pan";
             this.bgn_pan.Size = new System.Drawing.Size(75, 73);
@@ -170,7 +170,7 @@
             // 
             this.usd_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.usd_pan.Controls.Add(this.usd_lbl);
-            this.usd_pan.Location = new System.Drawing.Point(896, 556);
+            this.usd_pan.Location = new System.Drawing.Point(896, 507);
             this.usd_pan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usd_pan.Name = "usd_pan";
             this.usd_pan.Size = new System.Drawing.Size(75, 73);
@@ -190,7 +190,7 @@
             // 
             this.eur_lbl.AutoSize = true;
             this.eur_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.eur_lbl.Location = new System.Drawing.Point(1392, 580);
+            this.eur_lbl.Location = new System.Drawing.Point(1392, 531);
             this.eur_lbl.Name = "eur_lbl";
             this.eur_lbl.Size = new System.Drawing.Size(64, 25);
             this.eur_lbl.TabIndex = 2;
@@ -199,7 +199,7 @@
             // eur_pan
             // 
             this.eur_pan.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.eur_pan.Location = new System.Drawing.Point(1388, 556);
+            this.eur_pan.Location = new System.Drawing.Point(1388, 507);
             this.eur_pan.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.eur_pan.Name = "eur_pan";
             this.eur_pan.Size = new System.Drawing.Size(75, 73);
@@ -208,7 +208,7 @@
             // total3
             // 
             this.total3.AutoSize = true;
-            this.total3.Location = new System.Drawing.Point(1105, 574);
+            this.total3.Location = new System.Drawing.Point(1105, 525);
             this.total3.Name = "total3";
             this.total3.Size = new System.Drawing.Size(32, 36);
             this.total3.TabIndex = 11;
@@ -217,7 +217,7 @@
             // total1
             // 
             this.total1.AutoSize = true;
-            this.total1.Location = new System.Drawing.Point(99, 575);
+            this.total1.Location = new System.Drawing.Point(99, 526);
             this.total1.Name = "total1";
             this.total1.Size = new System.Drawing.Size(32, 36);
             this.total1.TabIndex = 9;
@@ -226,7 +226,7 @@
             // bgn_total
             // 
             this.bgn_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.bgn_total.Location = new System.Drawing.Point(96, 556);
+            this.bgn_total.Location = new System.Drawing.Point(96, 507);
             this.bgn_total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.bgn_total.Name = "bgn_total";
             this.bgn_total.Size = new System.Drawing.Size(361, 73);
@@ -235,7 +235,7 @@
             // add_btn
             // 
             this.add_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.add_btn.Location = new System.Drawing.Point(716, 651);
+            this.add_btn.Location = new System.Drawing.Point(716, 617);
             this.add_btn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.add_btn.Name = "add_btn";
             this.add_btn.Size = new System.Drawing.Size(133, 66);
@@ -251,7 +251,7 @@
             this.panel2.Location = new System.Drawing.Point(23, 13);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1524, 505);
+            this.panel2.Size = new System.Drawing.Size(1524, 457);
             this.panel2.TabIndex = 6;
             // 
             // recent_exp
@@ -265,14 +265,14 @@
             this.recent_exp.Name = "recent_exp";
             this.recent_exp.ReadOnly = true;
             this.recent_exp.RowHeadersWidth = 51;
-            this.recent_exp.Size = new System.Drawing.Size(1523, 434);
+            this.recent_exp.Size = new System.Drawing.Size(1523, 383);
             this.recent_exp.TabIndex = 0;
             // 
             // usd_total
             // 
             this.usd_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.usd_total.Controls.Add(this.total2);
-            this.usd_total.Location = new System.Drawing.Point(609, 556);
+            this.usd_total.Location = new System.Drawing.Point(609, 507);
             this.usd_total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.usd_total.Name = "usd_total";
             this.usd_total.Size = new System.Drawing.Size(361, 73);
@@ -290,7 +290,7 @@
             // eur_total
             // 
             this.eur_total.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.eur_total.Location = new System.Drawing.Point(1103, 556);
+            this.eur_total.Location = new System.Drawing.Point(1103, 507);
             this.eur_total.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.eur_total.Name = "eur_total";
             this.eur_total.Size = new System.Drawing.Size(361, 73);
@@ -400,7 +400,7 @@
         private System.Windows.Forms.Panel usd_pan;
         private System.Windows.Forms.Label usd_lbl;
         private System.Windows.Forms.Button cat_btn;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button del_btn;
     }
 }
 
