@@ -11,6 +11,10 @@ namespace UpCount
         public MainForm()
         {
             InitializeComponent();
+            using (FolderBrowserDialog dialog = new FolderBrowserDialog())
+            {
+                dialog.ShowDialog();
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -111,15 +115,7 @@ namespace UpCount
                 for (int i = 0; i < selectedRowCount; i++)
                 {
                     var val = recent_exp[0, recent_exp.SelectedRows[i].Index].Value.ToString();
-
                     var res = db.Expenses.SingleOrDefault(x => x.Id == int.Parse(val));
-
-                    foreach (PropertyDescriptor descriptor in TypeDescriptor.GetProperties(res))
-                    {
-                        string name = descriptor.Name;
-                        object value = descriptor.GetValue(res);
-                        Console.WriteLine("{0}={1}", name, value);
-                    }
 
                     db.Remove(res);
                     db.SaveChanges();
