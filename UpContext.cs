@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.Diagnostics;
 using UpCount;
 
 public class UpContext : DbContext
@@ -9,14 +10,18 @@ public class UpContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
+        
+
         if (!options.IsConfigured)
         {
-            options.UseSqlite("Data Source=C:\\Users\\gerem\\Desktop\\UpCount\\bin\\Debug\\net6.0-windows\\database.db");
+            options.UseSqlite($@"Data Source=database.db");
         }
     }
 
     public UpContext()
     {
+        string folder = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
         Database.Migrate();
+        Debug.WriteLine(folder);
     }
 }

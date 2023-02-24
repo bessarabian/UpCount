@@ -1,21 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Windows.Forms;
 
 namespace UpCount
 {
     public partial class MainForm : Form
     {
-        public static UpContext db = new();
-
         public MainForm()
         {
             InitializeComponent();
-            using (FolderBrowserDialog dialog = new FolderBrowserDialog())
-            {
-                dialog.ShowDialog();
-            }
+            
         }
+
+        public static UpContext db = new();
 
         private void Form1_Load(object sender, EventArgs e)
         {
