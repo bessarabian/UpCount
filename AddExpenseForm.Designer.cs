@@ -28,48 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.spenton_label = new System.Windows.Forms.Label();
             this.subject_cmbbox = new System.Windows.Forms.ComboBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.amnt_label = new System.Windows.Forms.Label();
             this.amount_textbox = new System.Windows.Forms.TextBox();
             this.confirm_exp_btn = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.curr_label = new System.Windows.Forms.Label();
             this.currency_cmbbox = new System.Windows.Forms.ComboBox();
             this.cancel_btn = new System.Windows.Forms.Button();
+            this.date_label = new System.Windows.Forms.Label();
+            this.date_select = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
-            // label1
+            // spenton_label
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(28, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 22);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Spent on:";
+            this.spenton_label.AutoSize = true;
+            this.spenton_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.spenton_label.Location = new System.Drawing.Point(28, 29);
+            this.spenton_label.Name = "spenton_label";
+            this.spenton_label.Size = new System.Drawing.Size(87, 22);
+            this.spenton_label.TabIndex = 0;
+            this.spenton_label.Text = "Spent on:";
             // 
             // subject_cmbbox
             // 
             this.subject_cmbbox.FormattingEnabled = true;
-            this.subject_cmbbox.Location = new System.Drawing.Point(33, 81);
+            this.subject_cmbbox.Location = new System.Drawing.Point(33, 63);
             this.subject_cmbbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.subject_cmbbox.Name = "subject_cmbbox";
             this.subject_cmbbox.Size = new System.Drawing.Size(259, 28);
             this.subject_cmbbox.TabIndex = 1;
             // 
-            // label2
+            // amnt_label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(28, 149);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(76, 22);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Amount:";
+            this.amnt_label.AutoSize = true;
+            this.amnt_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.amnt_label.Location = new System.Drawing.Point(28, 107);
+            this.amnt_label.Name = "amnt_label";
+            this.amnt_label.Size = new System.Drawing.Size(76, 22);
+            this.amnt_label.TabIndex = 2;
+            this.amnt_label.Text = "Amount:";
             // 
             // amount_textbox
             // 
-            this.amount_textbox.Location = new System.Drawing.Point(33, 200);
+            this.amount_textbox.Location = new System.Drawing.Point(33, 140);
             this.amount_textbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.amount_textbox.Name = "amount_textbox";
             this.amount_textbox.Size = new System.Drawing.Size(259, 27);
@@ -87,20 +89,20 @@
             this.confirm_exp_btn.UseVisualStyleBackColor = true;
             this.confirm_exp_btn.Click += new System.EventHandler(this.Button1_Click);
             // 
-            // label3
+            // curr_label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(28, 274);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(83, 22);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Currency";
+            this.curr_label.AutoSize = true;
+            this.curr_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.curr_label.Location = new System.Drawing.Point(28, 190);
+            this.curr_label.Name = "curr_label";
+            this.curr_label.Size = new System.Drawing.Size(88, 22);
+            this.curr_label.TabIndex = 5;
+            this.curr_label.Text = "Currency:";
             // 
             // currency_cmbbox
             // 
             this.currency_cmbbox.FormattingEnabled = true;
-            this.currency_cmbbox.Location = new System.Drawing.Point(33, 332);
+            this.currency_cmbbox.Location = new System.Drawing.Point(33, 229);
             this.currency_cmbbox.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.currency_cmbbox.Name = "currency_cmbbox";
             this.currency_cmbbox.Size = new System.Drawing.Size(259, 28);
@@ -118,19 +120,38 @@
             this.cancel_btn.UseVisualStyleBackColor = true;
             this.cancel_btn.Click += new System.EventHandler(this.Cancel_btn_Click);
             // 
+            // date_label
+            // 
+            this.date_label.AutoSize = true;
+            this.date_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.date_label.Location = new System.Drawing.Point(33, 276);
+            this.date_label.Name = "date_label";
+            this.date_label.Size = new System.Drawing.Size(53, 22);
+            this.date_label.TabIndex = 8;
+            this.date_label.Text = "Date:";
+            // 
+            // date_select
+            // 
+            this.date_select.Location = new System.Drawing.Point(33, 316);
+            this.date_select.Name = "date_select";
+            this.date_select.Size = new System.Drawing.Size(259, 27);
+            this.date_select.TabIndex = 9;
+            // 
             // AddExpenseForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(343, 562);
+            this.Controls.Add(this.date_select);
+            this.Controls.Add(this.date_label);
             this.Controls.Add(this.cancel_btn);
             this.Controls.Add(this.currency_cmbbox);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.curr_label);
             this.Controls.Add(this.confirm_exp_btn);
             this.Controls.Add(this.amount_textbox);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.amnt_label);
             this.Controls.Add(this.subject_cmbbox);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.spenton_label);
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "AddExpenseForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -143,13 +164,15 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label spenton_label;
         private System.Windows.Forms.ComboBox subject_cmbbox;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label amnt_label;
         private System.Windows.Forms.TextBox amount_textbox;
         private System.Windows.Forms.Button confirm_exp_btn;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label curr_label;
         private System.Windows.Forms.ComboBox currency_cmbbox;
         private Button cancel_btn;
+        private Label date_label;
+        private DateTimePicker date_select;
     }
 }

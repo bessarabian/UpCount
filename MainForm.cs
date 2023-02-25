@@ -87,8 +87,7 @@ namespace UpCount
                             total3.Text = Convert.ToString(Convert.ToDouble(total3.Text) + Convert.ToDouble(form2.Money_spent));
                             break;
                     }
-                    string date = DateTime.Now.ToString("dd/MM/yyyy");
-                    Expense expense = new(form2.Money_spent, date, form2.Curr_result.ToString(), form2.Selected_category);
+                    Expense expense = new(form2.Money_spent, form2.Date, form2.Curr_result.ToString(), form2.Selected_category);
                     db.Expenses.Add(expense);
                     db.SaveChanges();
                     GetAllExpenses();

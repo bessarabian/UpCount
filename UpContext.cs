@@ -6,22 +6,21 @@ public class UpContext : DbContext
 {
     public DbSet<Expense> Expenses => Set<Expense>();
     public DbSet<Category> Categories => Set<Category>();
-    public string DbPath { get; set; }
+    public string DbPath { get; set; }  
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        
-
+        string currentDirectory = Directory.GetCurrentDirectory();
+        DirectoryInfo currentDirectoryInfo = new DirectoryInfo(currentDirectory);
+        string grandParentPath = currentDirectoryInfo.Parent.Parent.Parent.FullName;
         if (!options.IsConfigured)
         {
-            options.UseSqlite($@"Data Source=database.db");
+            options.UseSqlite($"Data Source=" + @$"{grandParentPath}\\database.db");
         }
     }
 
     public UpContext()
     {
-        string folder = Path.GetDirectoryName(Process.GetCurrentProcess().MainModule.FileName);
         Database.Migrate();
-        Debug.WriteLine(folder);
     }
 }

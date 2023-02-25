@@ -1,10 +1,13 @@
-﻿namespace UpCount
+﻿using System.Windows.Forms;
+
+namespace UpCount
 {
     public partial class AddExpenseForm : Form
     {
         public double Money_spent { get; set; }
         public string Selected_category { get; set; }
         public Attribute.Currencies Curr_result { get; set; }
+        public string Date { get; set; }
         public AddExpenseForm()
         {
             
@@ -37,6 +40,8 @@
             {
                 Money_spent = Convert.ToDouble(amount_textbox.Text);
                 Selected_category = subject_cmbbox.Text;
+                string theDate = date_select.Value.ToShortDateString();
+                Date = theDate;
                 DialogResult = DialogResult.OK;
 
                 switch (currency_cmbbox.SelectedItem)
@@ -57,7 +62,7 @@
 
         private void Cancel_btn_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Close();
         }
     }
 }
