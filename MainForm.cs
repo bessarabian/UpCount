@@ -1,9 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System.ComponentModel;
-using System.Diagnostics;
-using System.Windows.Forms;
-
-namespace UpCount
+﻿namespace UpCount
 {
     public partial class MainForm : Form
     {
