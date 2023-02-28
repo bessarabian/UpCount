@@ -1,1 +1,1 @@
-<img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/UpCount%20Main.jpg?raw=true" width="650px" height="450px">
+<img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/UpCount%20Main.jpg?raw=true" width="800px" height="550px">
