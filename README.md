@@ -1,1 +1,1 @@
-![Main GUI of an app]()
+<img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/UpCount%20Main.jpg?raw=true" width="400px" height="200px">
