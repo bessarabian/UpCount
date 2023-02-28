@@ -1,1 +1,1 @@
-![alt text]()
+![Main GUI of an app]()

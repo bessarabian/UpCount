@@ -30,8 +30,6 @@
             recent_exp.AutoResizeColumns();
             recent_exp.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             recent_exp.Columns["ID"].Visible = false;
-
-
         }
 
         public void GetAllExpenses()
