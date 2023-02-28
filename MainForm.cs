@@ -115,6 +115,7 @@
             }
 
             GetAllExpenses();
+            UpdateTotals();
         }
     }
 }
