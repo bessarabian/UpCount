@@ -13,10 +13,12 @@
 ### 2. Currency indicators
 <img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/sample%20totals.png?raw=true">
 
-#### At this part of **Interface** are displayed awailable currencies that you may use for your expense details, which will update automatically after intered purchase with corresponding currency. Each cell displays totall amount of spent money.
+#### At this part of **Interface** are displayed available currencies that you may use for your expense details, which will update automatically after intered purchase with corresponding currency. Each cell displays totall amount of spent money.
 
 ### 3. Button section
 #### In this section are all necessary buttons for *Managing*, *Adding* and, *Deleting* records.
 - Categories
 #### This button allows you to add/delete categories for your expenses, contains simple logic in **Category Form**
-<img src="">
+<img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/sample%20categories%20form.png?raw=true">
+
+#### Entered categories will be available in Adding Expense form. Also, here you can delete them.
