@@ -26,7 +26,7 @@
     #### Entered categories will be available in Adding Expense form. Also, here you can delete them.
 
 - Add
-    #### Here you can **Add** your expenses which will be shown at the **Recent Expenses Grid***(1)*.
+    #### Here you can **Add** your expenses which will be shown at the **Recent Expenses Grid** *(1)*.
     <p>
     <img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/sample%20add%20expense%20form.png?raw=true" width="300" height="450">
     </p>
