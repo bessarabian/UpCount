@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace UpCount
+﻿namespace UpCount
 {
     public partial class AddExpenseForm : Form
     {

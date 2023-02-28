@@ -6,11 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
-    <ApplicationIcon>DALL·E 2023-02-25 12.59.46 - Pixel  money bag 64bit with gold coins .ico</ApplicationIcon>
+    <ApplicationIcon>q.ico</ApplicationIcon>
+    <IsPublishable>True</IsPublishable>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="DALL·E 2023-02-25 12.59.46 - Pixel  money bag 64bit with gold coins .ico" />
+    <Content Include="q.ico" />
   </ItemGroup>
 
   <ItemGroup>
