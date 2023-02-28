@@ -20,7 +20,7 @@
 - Categories
 #### This button allows you to add/delete categories for your expenses, contains simple logic in **Category Form**.
 <p align="center">
-    <img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/sample%20categories%20form.png?raw=true" width="300" height="600">
+    <img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/sample%20categories%20form.png?raw=true" width="300" height="450">
 </p>
 
 
