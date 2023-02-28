@@ -35,5 +35,9 @@
 
 - Delete 
     #### Pretty simple button, allows you to Delete unwanted or erroneus record. To delete you need select row by clicking left side of it and then press button:
-    <p>
-    <img src=""</p>
+    <p align="center>
+    <img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/sample%20row%20selection.png?raw=true"
+    </p>
+
+### Thanks for using our app!
+#### For mote details or information - contact creator by any link form GitHub Profile bio.
