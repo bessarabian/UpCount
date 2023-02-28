@@ -27,8 +27,13 @@
 
 - Add
     #### Here you can **Add** your expenses which will be shown at the **Recent Expenses Grid** *(1)*.
-    <p>
+    <p align="center">
     <img src="https://github.com/yeromin-vaskou/UpCount/blob/main/images/sample%20add%20expense%20form.png?raw=true" width="300" height="450">
     </p>
 
     #### At this forms are placed all necessary attributes as **Expense Subject**, **Amount** of spent money, used **Currency** and, **Date** of commited purchase. Afterwards they will be visible at corresponding cells at **Recent Expenses Grid**.
+
+- Delete 
+    #### Pretty simple button, allows you to Delete unwanted or erroneus record. To delete you need select row by clicking left side of it and then press button:
+    <p>
+    <img src=""</p>
