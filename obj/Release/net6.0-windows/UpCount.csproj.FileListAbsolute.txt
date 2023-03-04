@@ -66,7 +66,3 @@ C:\Users\gerem\Desktop\UpCount\obj\Release\net6.0-windows\refint\UpCount.dll
 C:\Users\gerem\Desktop\UpCount\obj\Release\net6.0-windows\UpCount.pdb
 C:\Users\gerem\Desktop\UpCount\obj\Release\net6.0-windows\UpCount.genruntimeconfig.cache
 C:\Users\gerem\Desktop\UpCount\obj\Release\net6.0-windows\ref\UpCount.dll
-C:\Users\gerem\Desktop\UpCount\bin\Release\net6.0-windows\UpCount.dll.manifest
-C:\Users\gerem\Desktop\UpCount\bin\Release\net6.0-windows\UpCount.application
-C:\Users\gerem\Desktop\UpCount\obj\Release\net6.0-windows\UpCount.dll.manifest
-C:\Users\gerem\Desktop\UpCount\obj\Release\net6.0-windows\UpCount.application
