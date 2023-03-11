@@ -40,4 +40,4 @@
     </p>
 
 ### Thanks for using our app!
-#### For mote details or information - contact creator by any link form GitHub Profile bio.
+#### For mote details or information - contact creator by any link form GitHub Profile moto.
